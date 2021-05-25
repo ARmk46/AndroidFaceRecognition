@@ -1,0 +1,3 @@
+C:\Users\Asus-2019\Downloads\Mini Project 205117027_Face recog Android\face-recognizer-android-master\app\src\main\jni\CMakeLists.txt
+C:\Users\Asus-2019\Downloads\Mini Project 205117027_Face recog Android\face-recognizer-android-master\app\src\main\jni\jnilibsvm\CMakeLists.txt
+C:\Users\Asus-2019\Downloads\Mini Project 205117027_Face recog Android\face-recognizer-android-master\app\src\main\jni\tensorflow_demo\CMakeLists.txt

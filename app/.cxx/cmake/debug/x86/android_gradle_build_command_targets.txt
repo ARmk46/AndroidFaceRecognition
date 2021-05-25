@@ -1,0 +1,8 @@
+Executable : C:\Users\Asus-2019\AppData\Local\Android\Sdk\cmake\3.10.2.4988404\bin\ninja.exe
+arguments : 
+-C
+C:\Users\Asus-2019\Downloads\Mini Project 205117027_Face recog Android\face-recognizer-android-master\app\.cxx\cmake\debug\x86
+jnilibsvm
+tensorflow_demo
+jvmArgs : 
+
