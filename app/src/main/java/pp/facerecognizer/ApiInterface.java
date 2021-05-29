@@ -14,5 +14,6 @@ public interface ApiInterface {
     @Multipart
     @POST("myimage/")
     Call<ResponseBody> uploadImage(@Part("my_name") RequestBody name,
+                                   @Part("my_id") RequestBody userid,
                                    @Part MultipartBody.Part my_image);
 }

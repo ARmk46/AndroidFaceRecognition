@@ -31,6 +31,7 @@
         android:layout_below="@+id/btn_Capture"
         android:text="Upload Image"
         android:layout_marginTop="20dp"
+        android:enabled="false"
         android:layout_marginLeft="50dp"
         android:layout_marginRight="50dp"
         android:id="@+id/btn_Upload"

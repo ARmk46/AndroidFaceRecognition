@@ -15,15 +15,28 @@ public class CrudActivity extends AppCompatActivity {
     Button updateuserbtn;
     Button deleteuserbtn;
     Button okbtn;
+    Boolean booladd=false,boolupdate=false,booldelete = false;
     EditText nameedittext;
     EditText idedittext;
     String name="";
     String id="";
 
     @Override
+    public void onRestart() {
+        super.onRestart();
+        nameedittext.setVisibility(View.GONE);
+        idedittext.setVisibility(View.GONE);
+        okbtn.setVisibility(View.GONE);
+        booladd=false;
+        boolupdate=false;
+        booldelete = false;
+    }
+
+    @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_crud);
+
 
         adduserbtn = findViewById(R.id.adduserbtn);
         updateuserbtn = findViewById(R.id.updateuserbtn);
@@ -38,33 +51,46 @@ public class CrudActivity extends AppCompatActivity {
                 nameedittext.setVisibility(View.VISIBLE);
                 idedittext.setVisibility(View.VISIBLE);
                 okbtn.setVisibility(View.VISIBLE);
+                booladd = true;
+            }
+        });
 
+        updateuserbtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                idedittext.setVisibility(View.VISIBLE);
+                boolupdate = true;
             }
         });
 
         okbtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                name = nameedittext.getText().toString();
-                id = idedittext.getText().toString();
+                if(booladd == true) {
 
-                if( idedittext.getText().toString().length() == 0 )
-                    idedittext.setError( "Id is required" );
-                else if( nameedittext.getText().toString().length() == 0 )
-                    nameedittext.setError( "Name is required!" );
-                else{
-                    Intent pictureActivityintent = new Intent(CrudActivity.this,pictureActivity.class);
-                    pictureActivityintent.putExtra("name",name);
-                    pictureActivityintent.putExtra("id",id);
-                    startActivity(pictureActivityintent);
+
+                    name = nameedittext.getText().toString();
+                    id = idedittext.getText().toString();
+
+                    if (idedittext.getText().toString().length() == 0)
+                        idedittext.setError("Id is required");
+                    else if (nameedittext.getText().toString().length() == 0)
+                        nameedittext.setError("Name is required!");
+                    else {
+                        Intent pictureActivityintent = new Intent(CrudActivity.this, pictureActivity.class);
+                        pictureActivityintent.putExtra("name", name);
+                        pictureActivityintent.putExtra("id", id);
+                        startActivity(pictureActivityintent);
+                    }
+                    booladd = false;
+                }
+                else if(boolupdate){
+
                 }
 
-               /* if(name == "")
-                {
-                    Toast.makeText(CrudActivity.this, "Name or id cannot be blank.....",Toast.LENGTH_SHORT).show();
-                } */
             }
         });
 
     }
+
 }

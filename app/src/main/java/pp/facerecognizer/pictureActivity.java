@@ -3,8 +3,11 @@ package pp.facerecognizer;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.content.FileProvider;
-import android.content.ActivityNotFoundException;
+
+import android.Manifest;
+import android.app.AlertDialog;
 import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
@@ -20,6 +23,8 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.Toast;
+
 import java.io.ByteArrayOutputStream;
 import java.io.File;
 import java.io.IOException;
@@ -40,7 +45,6 @@ import retrofit2.Retrofit;
 
 public class pictureActivity extends AppCompatActivity  {
 
-  //  private EditText Img_title;
     private Button upl_button,cap_button;
     private ImageView Img;
     private Bitmap bitmap;
@@ -55,21 +59,27 @@ public class pictureActivity extends AppCompatActivity  {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        if(Build.VERSION.SDK_INT >=23)
+        {
+            requestPermissions(new String[]{Manifest.permission.CAMERA, Manifest.permission.WRITE_EXTERNAL_STORAGE},2);
+        }
+
         Bundle data = getIntent().getExtras();
         String username = data.getString("name");
         String userid = data.getString("id");
-        System.out.println(username);
-        System.out.println(userid);
 
-    //    Img_title = (EditText) findViewById(R.id.img_title);
         cap_button = (Button) findViewById(R.id.btn_Capture);
         upl_button = (Button) findViewById(R.id.btn_Upload);
         Img = (ImageView) findViewById(R.id.imageView);
 
+
+
         cap_button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+
                 dispatchTakePictureIntent();
+
             }
         });
 
@@ -78,7 +88,7 @@ public class pictureActivity extends AppCompatActivity  {
             public void onClick(View v) {
 
           //      String img_Title = Img_title.getText().toString();
-                UploadImage("img_Title",photoURI);
+                UploadImage(username,userid,photoURI);
 
             }
         });
@@ -113,6 +123,7 @@ public class pictureActivity extends AppCompatActivity  {
         if (takePictureIntent.resolveActivity(getPackageManager()) != null)
         {
             // Create the File where the photo should go
+            upl_button.setEnabled(true);
             File photoFile = null;
             try {
                 photoFile = createImageFile();
@@ -189,30 +200,48 @@ public class pictureActivity extends AppCompatActivity  {
         return rotatedImg;
     }
 
-    private void UploadImage(String img_title,Uri photoURI)
+    private void UploadImage(String username,String uid,Uri photoURI)
     {
-       // String Image = imageToString();
+
         File file = new File(currentPhotoPath);
 
         RequestBody requestBody = RequestBody.create(MediaType.parse("image/*"),file);
         MultipartBody.Part my_image =
                 MultipartBody.Part.createFormData("my_image", file.getName(), requestBody);
 
-        RequestBody name = RequestBody.create(MediaType.parse("text/plain"),"Image1");
+        RequestBody name = RequestBody.create(MediaType.parse("text/plain"),username);
 
+        RequestBody userid = RequestBody.create(MediaType.parse("text/plain"),uid);
 
         Retrofit retrofit = ApiClient.getApiClient();
         ApiInterface apiInterface = retrofit.create(ApiInterface.class);
-        Call<ResponseBody> call = apiInterface.uploadImage(name,my_image);
+        Call<ResponseBody> call = apiInterface.uploadImage(name,userid,my_image);
         call.enqueue(new Callback<ResponseBody>() {
             @Override
             public void onResponse(Call<ResponseBody> call, Response<ResponseBody> response) {
-                System.out.println("!!!!! Successfully uploaded");
+                Toast.makeText(pictureActivity.this,"Successfully Uploaded !!!!!!",Toast.LENGTH_SHORT).show();
+                new AlertDialog.Builder(pictureActivity.this)
+                        .setTitle("Alert")
+                        .setMessage("Do you want to Upload Image again ???")
+                        .setPositiveButton(android.R.string.yes, new DialogInterface.OnClickListener() {
+                            public void onClick(DialogInterface dialog, int which) {
+                                upl_button.setEnabled(false);
+                            }
+                        })
+                        .setNegativeButton(android.R.string.no, new DialogInterface.OnClickListener() {
+                            @Override
+                            public void onClick(DialogInterface dialogInterface, int i) {
+                                finish();
+                            }
+                        })
+                        .setIcon(android.R.drawable.ic_dialog_alert)
+                        .show();
             }
 
             @Override
             public void onFailure(Call<ResponseBody> call, Throwable t) {
-                System.out.println("!!!!! Failed To Upload");
+                Toast.makeText(pictureActivity.this,"Failed to Upload,Contact Developer",Toast.LENGTH_SHORT).show();
+                finish();
             }
         });
     }
