@@ -1,49 +1,49 @@
 {
   "stringTable": {},
   "buildFiles": [
-    "C:\\Users\\Asus-2019\\Downloads\\Mini Project 205117027_Face recog Android\\face-recognizer-android-master\\app\\src\\main\\jni\\CMakeLists.txt",
-    "C:\\Users\\Asus-2019\\Downloads\\Mini Project 205117027_Face recog Android\\face-recognizer-android-master\\app\\src\\main\\jni\\jnilibsvm\\CMakeLists.txt",
-    "C:\\Users\\Asus-2019\\Downloads\\Mini Project 205117027_Face recog Android\\face-recognizer-android-master\\app\\src\\main\\jni\\tensorflow_demo\\CMakeLists.txt"
+    "/home/sharad2000/AndroidStudioProjects/AndroidFaceRecognition/app/src/main/jni/CMakeLists.txt",
+    "/home/sharad2000/AndroidStudioProjects/AndroidFaceRecognition/app/src/main/jni/jnilibsvm/CMakeLists.txt",
+    "/home/sharad2000/AndroidStudioProjects/AndroidFaceRecognition/app/src/main/jni/tensorflow_demo/CMakeLists.txt"
   ],
   "cleanCommandsComponents": [
     [
-      "C:\\Users\\Asus-2019\\AppData\\Local\\Android\\Sdk\\cmake\\3.10.2.4988404\\bin\\ninja.exe",
+      "/home/sharad2000/Android/Sdk/cmake/3.10.2.4988404/bin/ninja",
       "-C",
-      "C:\\Users\\Asus-2019\\Downloads\\Mini Project 205117027_Face recog Android\\face-recognizer-android-master\\app\\.cxx\\cmake\\debug\\x86",
+      "/home/sharad2000/AndroidStudioProjects/AndroidFaceRecognition/app/.cxx/cmake/debug/x86",
       "clean"
     ]
   ],
   "buildTargetsCommandComponents": [
-    "C:\\Users\\Asus-2019\\AppData\\Local\\Android\\Sdk\\cmake\\3.10.2.4988404\\bin\\ninja.exe",
+    "/home/sharad2000/Android/Sdk/cmake/3.10.2.4988404/bin/ninja",
     "-C",
-    "C:\\Users\\Asus-2019\\Downloads\\Mini Project 205117027_Face recog Android\\face-recognizer-android-master\\app\\.cxx\\cmake\\debug\\x86",
+    "/home/sharad2000/AndroidStudioProjects/AndroidFaceRecognition/app/.cxx/cmake/debug/x86",
     "{LIST_OF_TARGETS_TO_BUILD}"
   ],
   "libraries": {
     "jnilibsvm-Debug-x86": {
       "buildCommandComponents": [
-        "C:\\Users\\Asus-2019\\AppData\\Local\\Android\\Sdk\\cmake\\3.10.2.4988404\\bin\\ninja.exe",
+        "/home/sharad2000/Android/Sdk/cmake/3.10.2.4988404/bin/ninja",
         "-C",
-        "C:\\Users\\Asus-2019\\Downloads\\Mini Project 205117027_Face recog Android\\face-recognizer-android-master\\app\\.cxx\\cmake\\debug\\x86",
+        "/home/sharad2000/AndroidStudioProjects/AndroidFaceRecognition/app/.cxx/cmake/debug/x86",
         "jnilibsvm"
       ],
       "buildType": "debug",
       "abi": "x86",
       "artifactName": "jnilibsvm",
-      "output": "C:\\Users\\Asus-2019\\Downloads\\Mini Project 205117027_Face recog Android\\face-recognizer-android-master\\app\\build\\intermediates\\cmake\\debug\\obj\\x86\\libjnilibsvm.so",
+      "output": "/home/sharad2000/AndroidStudioProjects/AndroidFaceRecognition/app/build/intermediates/cmake/debug/obj/x86/libjnilibsvm.so",
       "runtimeFiles": []
     },
     "tensorflow_demo-Debug-x86": {
       "buildCommandComponents": [
-        "C:\\Users\\Asus-2019\\AppData\\Local\\Android\\Sdk\\cmake\\3.10.2.4988404\\bin\\ninja.exe",
+        "/home/sharad2000/Android/Sdk/cmake/3.10.2.4988404/bin/ninja",
         "-C",
-        "C:\\Users\\Asus-2019\\Downloads\\Mini Project 205117027_Face recog Android\\face-recognizer-android-master\\app\\.cxx\\cmake\\debug\\x86",
+        "/home/sharad2000/AndroidStudioProjects/AndroidFaceRecognition/app/.cxx/cmake/debug/x86",
         "tensorflow_demo"
       ],
       "buildType": "debug",
       "abi": "x86",
       "artifactName": "tensorflow_demo",
-      "output": "C:\\Users\\Asus-2019\\Downloads\\Mini Project 205117027_Face recog Android\\face-recognizer-android-master\\app\\build\\intermediates\\cmake\\debug\\obj\\x86\\libtensorflow_demo.so",
+      "output": "/home/sharad2000/AndroidStudioProjects/AndroidFaceRecognition/app/build/intermediates/cmake/debug/obj/x86/libtensorflow_demo.so",
       "runtimeFiles": []
     }
   },

@@ -13,7 +13,10 @@ public interface ApiInterface {
 
     @Multipart
     @POST("myimage/")
-    Call<ResponseBody> uploadImage(@Part("my_name") RequestBody name,
+    Call<ResponseBody> uploadImage(
                                    @Part("my_id") RequestBody userid,
+                                   @Part("my_name") RequestBody name,
                                    @Part MultipartBody.Part my_image);
 }
+
+

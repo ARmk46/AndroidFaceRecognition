@@ -1,8 +1,8 @@
-# Install script for directory: C:/Users/Asus-2019/Downloads/Mini Project 205117027_Face recog Android/face-recognizer-android-master/app/src/main/jni
+# Install script for directory: /home/sharad2000/AndroidStudioProjects/AndroidFaceRecognition/app/src/main/jni
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "C:/Program Files (x86)/FACERECOGNIZER")
+  set(CMAKE_INSTALL_PREFIX "/usr/local")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -29,7 +29,7 @@ endif()
 
 # Install shared libraries without execute permission?
 if(NOT DEFINED CMAKE_INSTALL_SO_NO_EXE)
-  set(CMAKE_INSTALL_SO_NO_EXE "0")
+  set(CMAKE_INSTALL_SO_NO_EXE "1")
 endif()
 
 # Is this installation the result of a crosscompile?
@@ -39,8 +39,8 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
-  include("C:/Users/Asus-2019/Downloads/Mini Project 205117027_Face recog Android/face-recognizer-android-master/app/.cxx/cmake/debug/x86/tensorflow_demo/cmake_install.cmake")
-  include("C:/Users/Asus-2019/Downloads/Mini Project 205117027_Face recog Android/face-recognizer-android-master/app/.cxx/cmake/debug/x86/jnilibsvm/cmake_install.cmake")
+  include("/home/sharad2000/AndroidStudioProjects/AndroidFaceRecognition/app/.cxx/cmake/debug/x86/tensorflow_demo/cmake_install.cmake")
+  include("/home/sharad2000/AndroidStudioProjects/AndroidFaceRecognition/app/.cxx/cmake/debug/x86/jnilibsvm/cmake_install.cmake")
 
 endif()
 
@@ -52,5 +52,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "C:/Users/Asus-2019/Downloads/Mini Project 205117027_Face recog Android/face-recognizer-android-master/app/.cxx/cmake/debug/x86/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/home/sharad2000/AndroidStudioProjects/AndroidFaceRecognition/app/.cxx/cmake/debug/x86/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

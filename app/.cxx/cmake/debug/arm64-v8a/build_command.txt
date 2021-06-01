@@ -1,21 +1,21 @@
-                    Executable : C:\Users\Asus-2019\AppData\Local\Android\Sdk\cmake\3.10.2.4988404\bin\cmake.exe
+                    Executable : /home/sharad2000/Android/Sdk/cmake/3.10.2.4988404/bin/cmake
 arguments : 
--HC:\Users\Asus-2019\Downloads\Mini Project 205117027_Face recog Android\face-recognizer-android-master\app\src\main\jni
--DCMAKE_FIND_ROOT_PATH=C:\Users\Asus-2019\Downloads\Mini Project 205117027_Face recog Android\face-recognizer-android-master\app\.cxx\cmake\debug\prefab\arm64-v8a\prefab
+-H/home/sharad2000/AndroidStudioProjects/AndroidFaceRecognition/app/src/main/jni
+-DCMAKE_FIND_ROOT_PATH=/home/sharad2000/AndroidStudioProjects/AndroidFaceRecognition/app/.cxx/cmake/debug/prefab/arm64-v8a/prefab
 -DCMAKE_BUILD_TYPE=Debug
--DCMAKE_TOOLCHAIN_FILE=C:\Users\Asus-2019\AppData\Local\Android\Sdk\ndk\21.4.7075529\build\cmake\android.toolchain.cmake
+-DCMAKE_TOOLCHAIN_FILE=/home/sharad2000/Android/Sdk/ndk/21.4.7075529/build/cmake/android.toolchain.cmake
 -DANDROID_ABI=arm64-v8a
--DANDROID_NDK=C:\Users\Asus-2019\AppData\Local\Android\Sdk\ndk\21.4.7075529
+-DANDROID_NDK=/home/sharad2000/Android/Sdk/ndk/21.4.7075529
 -DANDROID_PLATFORM=android-24
 -DCMAKE_ANDROID_ARCH_ABI=arm64-v8a
--DCMAKE_ANDROID_NDK=C:\Users\Asus-2019\AppData\Local\Android\Sdk\ndk\21.4.7075529
+-DCMAKE_ANDROID_NDK=/home/sharad2000/Android/Sdk/ndk/21.4.7075529
 -DCMAKE_EXPORT_COMPILE_COMMANDS=ON
--DCMAKE_LIBRARY_OUTPUT_DIRECTORY=C:\Users\Asus-2019\Downloads\Mini Project 205117027_Face recog Android\face-recognizer-android-master\app\build\intermediates\cmake\debug\obj\arm64-v8a
--DCMAKE_RUNTIME_OUTPUT_DIRECTORY=C:\Users\Asus-2019\Downloads\Mini Project 205117027_Face recog Android\face-recognizer-android-master\app\build\intermediates\cmake\debug\obj\arm64-v8a
--DCMAKE_MAKE_PROGRAM=C:\Users\Asus-2019\AppData\Local\Android\Sdk\cmake\3.10.2.4988404\bin\ninja.exe
+-DCMAKE_LIBRARY_OUTPUT_DIRECTORY=/home/sharad2000/AndroidStudioProjects/AndroidFaceRecognition/app/build/intermediates/cmake/debug/obj/arm64-v8a
+-DCMAKE_RUNTIME_OUTPUT_DIRECTORY=/home/sharad2000/AndroidStudioProjects/AndroidFaceRecognition/app/build/intermediates/cmake/debug/obj/arm64-v8a
+-DCMAKE_MAKE_PROGRAM=/home/sharad2000/Android/Sdk/cmake/3.10.2.4988404/bin/ninja
 -DCMAKE_SYSTEM_NAME=Android
 -DCMAKE_SYSTEM_VERSION=24
--BC:\Users\Asus-2019\Downloads\Mini Project 205117027_Face recog Android\face-recognizer-android-master\app\.cxx\cmake\debug\arm64-v8a
+-B/home/sharad2000/AndroidStudioProjects/AndroidFaceRecognition/app/.cxx/cmake/debug/arm64-v8a
 -GNinja
 jvmArgs : 
 

@@ -3,7 +3,6 @@ package pp.facerecognizer;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.content.FileProvider;
-
 import android.Manifest;
 import android.app.AlertDialog;
 import android.content.Context;
@@ -52,8 +51,6 @@ public class pictureActivity extends AppCompatActivity  {
     String currentPhotoPath;
     Uri photoURI;
 
-
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -72,8 +69,6 @@ public class pictureActivity extends AppCompatActivity  {
         upl_button = (Button) findViewById(R.id.btn_Upload);
         Img = (ImageView) findViewById(R.id.imageView);
 
-
-
         cap_button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -86,10 +81,7 @@ public class pictureActivity extends AppCompatActivity  {
         upl_button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
-          //      String img_Title = Img_title.getText().toString();
                 UploadImage(username,userid,photoURI);
-
             }
         });
 
@@ -119,10 +111,9 @@ public class pictureActivity extends AppCompatActivity  {
     private void dispatchTakePictureIntent()
     {
         Intent takePictureIntent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
-        // Ensure that there's a camera activity to handle the intent
+
         if (takePictureIntent.resolveActivity(getPackageManager()) != null)
         {
-            // Create the File where the photo should go
             upl_button.setEnabled(true);
             File photoFile = null;
             try {
@@ -143,10 +134,8 @@ public class pictureActivity extends AppCompatActivity  {
         }
     }
 
-
-
     private File createImageFile() throws IOException {
-        // Create an image file name
+
         String timeStamp = new SimpleDateFormat("yyyyMMdd_HHmmss").format(new Date());
         String imageFileName = "img" + timeStamp + "_";
         File storageDir = getExternalFilesDir(Environment.DIRECTORY_PICTURES);
@@ -155,20 +144,11 @@ public class pictureActivity extends AppCompatActivity  {
                 ".jpg",         /* suffix */
                 storageDir      /* directory */
         );
-
-        // Save a file: path for use with ACTION_VIEW intents
         currentPhotoPath = image.getAbsolutePath();
-      //  System.out.println(currentPhotoPath);
+
         return image;
     }
 
-    /**
-     * Rotate an image if required.
-     *
-     * @param img           The image bitmap
-     * @param selectedImage Image URI
-     * @return The resulted Bitmap after manipulation
-     */
     private static Bitmap rotateImageIfRequired(Context context, Bitmap img, Uri selectedImage) throws IOException {
 
         InputStream input = context.getContentResolver().openInputStream(selectedImage);
@@ -202,20 +182,15 @@ public class pictureActivity extends AppCompatActivity  {
 
     private void UploadImage(String username,String uid,Uri photoURI)
     {
-
         File file = new File(currentPhotoPath);
-
         RequestBody requestBody = RequestBody.create(MediaType.parse("image/*"),file);
-        MultipartBody.Part my_image =
-                MultipartBody.Part.createFormData("my_image", file.getName(), requestBody);
-
+        MultipartBody.Part my_image =MultipartBody.Part.createFormData("my_image", file.getName(), requestBody);
         RequestBody name = RequestBody.create(MediaType.parse("text/plain"),username);
-
         RequestBody userid = RequestBody.create(MediaType.parse("text/plain"),uid);
-
         Retrofit retrofit = ApiClient.getApiClient();
         ApiInterface apiInterface = retrofit.create(ApiInterface.class);
-        Call<ResponseBody> call = apiInterface.uploadImage(name,userid,my_image);
+
+        Call<ResponseBody> call = apiInterface.uploadImage(userid,name,my_image);
         call.enqueue(new Callback<ResponseBody>() {
             @Override
             public void onResponse(Call<ResponseBody> call, Response<ResponseBody> response) {
@@ -237,7 +212,6 @@ public class pictureActivity extends AppCompatActivity  {
                         .setIcon(android.R.drawable.ic_dialog_alert)
                         .show();
             }
-
             @Override
             public void onFailure(Call<ResponseBody> call, Throwable t) {
                 Toast.makeText(pictureActivity.this,"Failed to Upload,Contact Developer",Toast.LENGTH_SHORT).show();
@@ -252,7 +226,6 @@ public class pictureActivity extends AppCompatActivity  {
         bitmap.compress(Bitmap.CompressFormat.JPEG,100,byteArrayOutputStream);
         byte[] imageByte = byteArrayOutputStream.toByteArray();
         return android.util.Base64.encodeToString(imageByte, android.util.Base64.DEFAULT);
-
     }
 
 }
