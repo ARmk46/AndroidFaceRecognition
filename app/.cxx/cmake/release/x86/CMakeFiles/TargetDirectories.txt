@@ -1,0 +1,8 @@
+C:/Users/Asus-2019/AndroidStudioProjects/AndroidFaceRecognition/app/.cxx/cmake/release/x86/CMakeFiles/edit_cache.dir
+C:/Users/Asus-2019/AndroidStudioProjects/AndroidFaceRecognition/app/.cxx/cmake/release/x86/CMakeFiles/rebuild_cache.dir
+C:/Users/Asus-2019/AndroidStudioProjects/AndroidFaceRecognition/app/.cxx/cmake/release/x86/tensorflow_demo/CMakeFiles/tensorflow_demo.dir
+C:/Users/Asus-2019/AndroidStudioProjects/AndroidFaceRecognition/app/.cxx/cmake/release/x86/tensorflow_demo/CMakeFiles/edit_cache.dir
+C:/Users/Asus-2019/AndroidStudioProjects/AndroidFaceRecognition/app/.cxx/cmake/release/x86/tensorflow_demo/CMakeFiles/rebuild_cache.dir
+C:/Users/Asus-2019/AndroidStudioProjects/AndroidFaceRecognition/app/.cxx/cmake/release/x86/jnilibsvm/CMakeFiles/jnilibsvm.dir
+C:/Users/Asus-2019/AndroidStudioProjects/AndroidFaceRecognition/app/.cxx/cmake/release/x86/jnilibsvm/CMakeFiles/edit_cache.dir
+C:/Users/Asus-2019/AndroidStudioProjects/AndroidFaceRecognition/app/.cxx/cmake/release/x86/jnilibsvm/CMakeFiles/rebuild_cache.dir

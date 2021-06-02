@@ -1,0 +1,23 @@
+# ninja log v5
+177	681	644341608	tensorflow_demo/CMakeFiles/tensorflow_demo.dir/object_tracking/image_neon.cc.o	99e303ecdb6b2d9d
+265	697	644341608	tensorflow_demo/CMakeFiles/tensorflow_demo.dir/object_tracking/time_log.cc.o	51bcd2efafe86edc
+698	983	644341608	tensorflow_demo/CMakeFiles/tensorflow_demo.dir/object_tracking/utils_neon.cc.o	c120cd4470feafbc
+10	1424	644341608	tensorflow_demo/CMakeFiles/tensorflow_demo.dir/imageutils_jni.cc.o	95be974f50ef0d5a
+984	1698	644341609	tensorflow_demo/CMakeFiles/tensorflow_demo.dir/rgb2yuv.cc.o	10f7bbc409b39252
+1426	2402	644341609	tensorflow_demo/CMakeFiles/tensorflow_demo.dir/yuv2rgb.cc.o	d055ce50893f656f
+182	3001	644341610	tensorflow_demo/CMakeFiles/tensorflow_demo.dir/object_tracking/frame_pair.cc.o	6731dc4a695d0ad1
+203	3663	644341610	tensorflow_demo/CMakeFiles/tensorflow_demo.dir/object_tracking/object_detector.cc.o	4c8707fe760607e
+245	3671	644341611	tensorflow_demo/CMakeFiles/tensorflow_demo.dir/object_tracking/logging.cc.o	678ace71b09bf7f2
+199	3814	644341611	tensorflow_demo/CMakeFiles/tensorflow_demo.dir/object_tracking/keypoint_detector.cc.o	df09457ba748160
+260	3838	644341611	tensorflow_demo/CMakeFiles/tensorflow_demo.dir/object_tracking/optical_flow.cc.o	c629fce9f7d95570
+256	4009	644341611	tensorflow_demo/CMakeFiles/tensorflow_demo.dir/object_tracking/tracked_object.cc.o	d40e59ebac9d575e
+681	4076	644341611	tensorflow_demo/CMakeFiles/tensorflow_demo.dir/object_tracking/object_tracker_jni.cc.o	950232f21d6c7c31
+3671	4307	644341611	jnilibsvm/CMakeFiles/jnilibsvm.dir/libsvm/svm-scale.cpp.o	44f06b173f811690
+1699	4708	644341612	jnilibsvm/CMakeFiles/jnilibsvm.dir/common.cpp.o	df4ccf00fe73992b
+2402	4899	644341612	jnilibsvm/CMakeFiles/jnilibsvm.dir/jnilibsvm.cpp.o	2776a9a42a0f2b86
+252	4994	644341612	tensorflow_demo/CMakeFiles/tensorflow_demo.dir/object_tracking/object_tracker.cc.o	a7bf27f2a15acead
+3003	5183	644341612	jnilibsvm/CMakeFiles/jnilibsvm.dir/libsvm/svm-train.cpp.o	4f38fbebf5009500
+3815	5333	644341612	jnilibsvm/CMakeFiles/jnilibsvm.dir/libsvm/svm-predict.cpp.o	427853b455860ec8
+3664	5599	644341613	jnilibsvm/CMakeFiles/jnilibsvm.dir/libsvm/svm.cpp.o	1e5fcfa2ffddaadb
+4995	5780	644341613	C:/Users/Asus-2019/AndroidStudioProjects/AndroidFaceRecognition/app/build/intermediates/cmake/debug/obj/x86/libtensorflow_demo.so	9160c475152e9f6c
+5599	5811	644341613	C:/Users/Asus-2019/AndroidStudioProjects/AndroidFaceRecognition/app/build/intermediates/cmake/debug/obj/x86/libjnilibsvm.so	dc9733305605808

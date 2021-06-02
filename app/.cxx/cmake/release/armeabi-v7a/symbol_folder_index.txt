@@ -1,0 +1,1 @@
+C:\Users\Asus-2019\AndroidStudioProjects\AndroidFaceRecognition\app\build\intermediates\cmake\release\obj\armeabi-v7a
