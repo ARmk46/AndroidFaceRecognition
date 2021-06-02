@@ -29,8 +29,10 @@ import java.io.File;
 import java.io.IOException;
 import java.io.InputStream;
 import java.text.SimpleDateFormat;
+import java.util.ArrayList;
 import java.util.Base64;
 import java.util.Date;
+import java.util.List;
 
 import okhttp3.MediaType;
 import okhttp3.MultipartBody;
@@ -51,6 +53,8 @@ public class pictureActivity extends AppCompatActivity  {
     String currentPhotoPath;
     Uri photoURI;
 
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -60,6 +64,8 @@ public class pictureActivity extends AppCompatActivity  {
         {
             requestPermissions(new String[]{Manifest.permission.CAMERA, Manifest.permission.WRITE_EXTERNAL_STORAGE},2);
         }
+
+
 
         Bundle data = getIntent().getExtras();
         String username = data.getString("name");
@@ -218,14 +224,6 @@ public class pictureActivity extends AppCompatActivity  {
                 finish();
             }
         });
-    }
-
-    private String imageToString()
-    {
-        ByteArrayOutputStream byteArrayOutputStream = new ByteArrayOutputStream();
-        bitmap.compress(Bitmap.CompressFormat.JPEG,100,byteArrayOutputStream);
-        byte[] imageByte = byteArrayOutputStream.toByteArray();
-        return android.util.Base64.encodeToString(imageByte, android.util.Base64.DEFAULT);
     }
 
 }

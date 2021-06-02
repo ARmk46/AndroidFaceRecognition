@@ -1,3 +1,3 @@
-/home/sharad2000/AndroidStudioProjects/AndroidFaceRecognition/app/src/main/jni/CMakeLists.txt
-/home/sharad2000/AndroidStudioProjects/AndroidFaceRecognition/app/src/main/jni/jnilibsvm/CMakeLists.txt
-/home/sharad2000/AndroidStudioProjects/AndroidFaceRecognition/app/src/main/jni/tensorflow_demo/CMakeLists.txt
+C:\Users\Asus-2019\AndroidStudioProjects\AndroidFaceRecognition\app\src\main\jni\CMakeLists.txt
+C:\Users\Asus-2019\AndroidStudioProjects\AndroidFaceRecognition\app\src\main\jni\jnilibsvm\CMakeLists.txt
+C:\Users\Asus-2019\AndroidStudioProjects\AndroidFaceRecognition\app\src\main\jni\tensorflow_demo\CMakeLists.txt

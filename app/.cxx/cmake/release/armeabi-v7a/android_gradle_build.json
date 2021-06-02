@@ -1,280 +1,53 @@
 {
-  "stringTable": {
-    "0": "C:/Users/Asus-2019/Downloads/Mini Project 205117027_Face recog Android/face-recognizer-android-master/app/.cxx/cmake/release/armeabi-v7a",
-    "1": "--target=armv7-none-linux-androideabi24 --gcc-toolchain=C:/Users/Asus-2019/AppData/Local/Android/Sdk/ndk/21.1.6352462/toolchains/llvm/prebuilt/windows-x86_64 --sysroot=C:/Users/Asus-2019/AppData/Local/Android/Sdk/ndk/21.1.6352462/toolchains/llvm/prebuilt/windows-x86_64/sysroot -Dtensorflow_demo_EXPORTS -I\"C:/Users/Asus-2019/Downloads/Mini Project 205117027_Face recog Android/face-recognizer-android-master/app/src/main/jni\" -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -march=armv7-a -mthumb -Wformat -Werror=format-security -mfloat-abi=softfp -mfpu=neon -DSTANDALONE_DEMO_LIB -std=c++11 -fno-exceptions -fno-rtti -O2 -Wno-narrowing -fPIE -Oz -DNDEBUG -fPIC",
-    "2": "--target=armv7-none-linux-androideabi24 --gcc-toolchain=C:/Users/Asus-2019/AppData/Local/Android/Sdk/ndk/21.1.6352462/toolchains/llvm/prebuilt/windows-x86_64 --sysroot=C:/Users/Asus-2019/AppData/Local/Android/Sdk/ndk/21.1.6352462/toolchains/llvm/prebuilt/windows-x86_64/sysroot -Djnilibsvm_EXPORTS -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -march=armv7-a -mthumb -Wformat -Werror=format-security -fno-exceptions -frtti -Oz -DNDEBUG -fPIC",
-    "3": "null"
-  },
+  "stringTable": {},
   "buildFiles": [
-    "C:\\Users\\Asus-2019\\Downloads\\Mini Project 205117027_Face recog Android\\face-recognizer-android-master\\app\\src\\main\\jni\\CMakeLists.txt",
-    "C:\\Users\\Asus-2019\\AppData\\Local\\Android\\Sdk\\ndk\\21.1.6352462\\build\\cmake\\android.toolchain.cmake",
-    "C:\\Users\\Asus-2019\\AppData\\Local\\Android\\Sdk\\ndk\\21.1.6352462\\build\\cmake\\platforms.cmake",
-    "C:\\Users\\Asus-2019\\Downloads\\Mini Project 205117027_Face recog Android\\face-recognizer-android-master\\app\\src\\main\\jni\\tensorflow_demo\\CMakeLists.txt",
-    "C:\\Users\\Asus-2019\\Downloads\\Mini Project 205117027_Face recog Android\\face-recognizer-android-master\\app\\src\\main\\jni\\jnilibsvm\\CMakeLists.txt"
+    "C:\\Users\\Asus-2019\\AndroidStudioProjects\\AndroidFaceRecognition\\app\\src\\main\\jni\\CMakeLists.txt",
+    "C:\\Users\\Asus-2019\\AndroidStudioProjects\\AndroidFaceRecognition\\app\\src\\main\\jni\\jnilibsvm\\CMakeLists.txt",
+    "C:\\Users\\Asus-2019\\AndroidStudioProjects\\AndroidFaceRecognition\\app\\src\\main\\jni\\tensorflow_demo\\CMakeLists.txt"
   ],
-  "cleanCommands": [
-    "C:\\Users\\Asus-2019\\AppData\\Local\\Android\\Sdk\\cmake\\3.10.2.4988404\\bin\\ninja.exe -C \"C:\\Users\\Asus-2019\\Downloads\\Mini Project 205117027_Face recog Android\\face-recognizer-android-master\\app\\.cxx\\cmake\\release\\armeabi-v7a\" clean"
+  "cleanCommandsComponents": [
+    [
+      "C:\\Users\\Asus-2019\\AppData\\Local\\Android\\Sdk\\cmake\\3.10.2.4988404\\bin\\ninja.exe",
+      "-C",
+      "C:\\Users\\Asus-2019\\AndroidStudioProjects\\AndroidFaceRecognition\\app\\.cxx\\cmake\\release\\armeabi-v7a",
+      "clean"
+    ]
   ],
-  "buildTargetsCommand": "C:\\Users\\Asus-2019\\AppData\\Local\\Android\\Sdk\\cmake\\3.10.2.4988404\\bin\\ninja.exe  -C \"C:\\Users\\Asus-2019\\Downloads\\Mini Project 205117027_Face recog Android\\face-recognizer-android-master\\app\\.cxx\\cmake\\release\\armeabi-v7a\" {LIST_OF_TARGETS_TO_BUILD}",
+  "buildTargetsCommandComponents": [
+    "C:\\Users\\Asus-2019\\AppData\\Local\\Android\\Sdk\\cmake\\3.10.2.4988404\\bin\\ninja.exe",
+    "-C",
+    "C:\\Users\\Asus-2019\\AndroidStudioProjects\\AndroidFaceRecognition\\app\\.cxx\\cmake\\release\\armeabi-v7a",
+    "{LIST_OF_TARGETS_TO_BUILD}"
+  ],
   "libraries": {
     "jnilibsvm-Release-armeabi-v7a": {
-      "buildCommand": "C:\\Users\\Asus-2019\\AppData\\Local\\Android\\Sdk\\cmake\\3.10.2.4988404\\bin\\ninja.exe -C \"C:\\Users\\Asus-2019\\Downloads\\Mini Project 205117027_Face recog Android\\face-recognizer-android-master\\app\\.cxx\\cmake\\release\\armeabi-v7a\" jnilibsvm",
+      "buildCommandComponents": [
+        "C:\\Users\\Asus-2019\\AppData\\Local\\Android\\Sdk\\cmake\\3.10.2.4988404\\bin\\ninja.exe",
+        "-C",
+        "C:\\Users\\Asus-2019\\AndroidStudioProjects\\AndroidFaceRecognition\\app\\.cxx\\cmake\\release\\armeabi-v7a",
+        "jnilibsvm"
+      ],
       "buildType": "release",
-      "toolchain": "2652442117",
       "abi": "armeabi-v7a",
       "artifactName": "jnilibsvm",
-      "files": [
-        {
-          "src": "C:\\Users\\Asus-2019\\Downloads\\Mini Project 205117027_Face recog Android\\face-recognizer-android-master\\app\\src\\main\\jni\\jnilibsvm\\CMakeLists.txt",
-          "flagsOrdinal": 3,
-          "workingDirectoryOrdinal": 0
-        },
-        {
-          "src": "C:\\Users\\Asus-2019\\Downloads\\Mini Project 205117027_Face recog Android\\face-recognizer-android-master\\app\\src\\main\\jni\\jnilibsvm\\common.cpp",
-          "flagsOrdinal": 2,
-          "workingDirectoryOrdinal": 0
-        },
-        {
-          "src": "C:\\Users\\Asus-2019\\Downloads\\Mini Project 205117027_Face recog Android\\face-recognizer-android-master\\app\\src\\main\\jni\\jnilibsvm\\jnilibsvm.cpp",
-          "flagsOrdinal": 2,
-          "workingDirectoryOrdinal": 0
-        },
-        {
-          "src": "C:\\Users\\Asus-2019\\Downloads\\Mini Project 205117027_Face recog Android\\face-recognizer-android-master\\app\\src\\main\\jni\\jnilibsvm\\libsvm\\svm-predict.cpp",
-          "flagsOrdinal": 2,
-          "workingDirectoryOrdinal": 0
-        },
-        {
-          "src": "C:\\Users\\Asus-2019\\Downloads\\Mini Project 205117027_Face recog Android\\face-recognizer-android-master\\app\\src\\main\\jni\\jnilibsvm\\libsvm\\svm-scale.cpp",
-          "flagsOrdinal": 2,
-          "workingDirectoryOrdinal": 0
-        },
-        {
-          "src": "C:\\Users\\Asus-2019\\Downloads\\Mini Project 205117027_Face recog Android\\face-recognizer-android-master\\app\\src\\main\\jni\\jnilibsvm\\libsvm\\svm-train.cpp",
-          "flagsOrdinal": 2,
-          "workingDirectoryOrdinal": 0
-        },
-        {
-          "src": "C:\\Users\\Asus-2019\\Downloads\\Mini Project 205117027_Face recog Android\\face-recognizer-android-master\\app\\src\\main\\jni\\jnilibsvm\\libsvm\\svm.cpp",
-          "flagsOrdinal": 2,
-          "workingDirectoryOrdinal": 0
-        }
-      ],
-      "headers": [
-        {
-          "header": "C:\\Users\\Asus-2019\\Downloads\\Mini Project 205117027_Face recog Android\\face-recognizer-android-master\\app\\src\\main\\jni\\jnilibsvm\\common.h",
-          "workingDirectoryOrdinal": 0
-        },
-        {
-          "header": "C:\\Users\\Asus-2019\\Downloads\\Mini Project 205117027_Face recog Android\\face-recognizer-android-master\\app\\src\\main\\jni\\jnilibsvm\\libsvm\\svm-predict.h",
-          "workingDirectoryOrdinal": 0
-        },
-        {
-          "header": "C:\\Users\\Asus-2019\\Downloads\\Mini Project 205117027_Face recog Android\\face-recognizer-android-master\\app\\src\\main\\jni\\jnilibsvm\\libsvm\\svm-scale.h",
-          "workingDirectoryOrdinal": 0
-        },
-        {
-          "header": "C:\\Users\\Asus-2019\\Downloads\\Mini Project 205117027_Face recog Android\\face-recognizer-android-master\\app\\src\\main\\jni\\jnilibsvm\\libsvm\\svm-train.h",
-          "workingDirectoryOrdinal": 0
-        },
-        {
-          "header": "C:\\Users\\Asus-2019\\Downloads\\Mini Project 205117027_Face recog Android\\face-recognizer-android-master\\app\\src\\main\\jni\\jnilibsvm\\libsvm\\svm.h",
-          "workingDirectoryOrdinal": 0
-        }
-      ],
-      "output": "C:\\Users\\Asus-2019\\Downloads\\Mini Project 205117027_Face recog Android\\face-recognizer-android-master\\app\\build\\intermediates\\cmake\\release\\obj\\armeabi-v7a\\libjnilibsvm.so",
+      "output": "C:\\Users\\Asus-2019\\AndroidStudioProjects\\AndroidFaceRecognition\\app\\build\\intermediates\\cmake\\release\\obj\\armeabi-v7a\\libjnilibsvm.so",
       "runtimeFiles": []
     },
     "tensorflow_demo-Release-armeabi-v7a": {
-      "buildCommand": "C:\\Users\\Asus-2019\\AppData\\Local\\Android\\Sdk\\cmake\\3.10.2.4988404\\bin\\ninja.exe -C \"C:\\Users\\Asus-2019\\Downloads\\Mini Project 205117027_Face recog Android\\face-recognizer-android-master\\app\\.cxx\\cmake\\release\\armeabi-v7a\" tensorflow_demo",
+      "buildCommandComponents": [
+        "C:\\Users\\Asus-2019\\AppData\\Local\\Android\\Sdk\\cmake\\3.10.2.4988404\\bin\\ninja.exe",
+        "-C",
+        "C:\\Users\\Asus-2019\\AndroidStudioProjects\\AndroidFaceRecognition\\app\\.cxx\\cmake\\release\\armeabi-v7a",
+        "tensorflow_demo"
+      ],
       "buildType": "release",
-      "toolchain": "2652442117",
       "abi": "armeabi-v7a",
       "artifactName": "tensorflow_demo",
-      "files": [
-        {
-          "src": "C:\\Users\\Asus-2019\\Downloads\\Mini Project 205117027_Face recog Android\\face-recognizer-android-master\\app\\src\\main\\jni\\tensorflow_demo\\CMakeLists.txt",
-          "flagsOrdinal": 3,
-          "workingDirectoryOrdinal": 0
-        },
-        {
-          "src": "C:\\Users\\Asus-2019\\Downloads\\Mini Project 205117027_Face recog Android\\face-recognizer-android-master\\app\\src\\main\\jni\\tensorflow_demo\\imageutils_jni.cc",
-          "flagsOrdinal": 1,
-          "workingDirectoryOrdinal": 0
-        },
-        {
-          "src": "C:\\Users\\Asus-2019\\Downloads\\Mini Project 205117027_Face recog Android\\face-recognizer-android-master\\app\\src\\main\\jni\\tensorflow_demo\\object_tracking\\frame_pair.cc",
-          "flagsOrdinal": 1,
-          "workingDirectoryOrdinal": 0
-        },
-        {
-          "src": "C:\\Users\\Asus-2019\\Downloads\\Mini Project 205117027_Face recog Android\\face-recognizer-android-master\\app\\src\\main\\jni\\tensorflow_demo\\object_tracking\\image_neon.cc",
-          "flagsOrdinal": 1,
-          "workingDirectoryOrdinal": 0
-        },
-        {
-          "src": "C:\\Users\\Asus-2019\\Downloads\\Mini Project 205117027_Face recog Android\\face-recognizer-android-master\\app\\src\\main\\jni\\tensorflow_demo\\object_tracking\\keypoint_detector.cc",
-          "flagsOrdinal": 1,
-          "workingDirectoryOrdinal": 0
-        },
-        {
-          "src": "C:\\Users\\Asus-2019\\Downloads\\Mini Project 205117027_Face recog Android\\face-recognizer-android-master\\app\\src\\main\\jni\\tensorflow_demo\\object_tracking\\logging.cc",
-          "flagsOrdinal": 1,
-          "workingDirectoryOrdinal": 0
-        },
-        {
-          "src": "C:\\Users\\Asus-2019\\Downloads\\Mini Project 205117027_Face recog Android\\face-recognizer-android-master\\app\\src\\main\\jni\\tensorflow_demo\\object_tracking\\object_detector.cc",
-          "flagsOrdinal": 1,
-          "workingDirectoryOrdinal": 0
-        },
-        {
-          "src": "C:\\Users\\Asus-2019\\Downloads\\Mini Project 205117027_Face recog Android\\face-recognizer-android-master\\app\\src\\main\\jni\\tensorflow_demo\\object_tracking\\object_tracker.cc",
-          "flagsOrdinal": 1,
-          "workingDirectoryOrdinal": 0
-        },
-        {
-          "src": "C:\\Users\\Asus-2019\\Downloads\\Mini Project 205117027_Face recog Android\\face-recognizer-android-master\\app\\src\\main\\jni\\tensorflow_demo\\object_tracking\\object_tracker_jni.cc",
-          "flagsOrdinal": 1,
-          "workingDirectoryOrdinal": 0
-        },
-        {
-          "src": "C:\\Users\\Asus-2019\\Downloads\\Mini Project 205117027_Face recog Android\\face-recognizer-android-master\\app\\src\\main\\jni\\tensorflow_demo\\object_tracking\\optical_flow.cc",
-          "flagsOrdinal": 1,
-          "workingDirectoryOrdinal": 0
-        },
-        {
-          "src": "C:\\Users\\Asus-2019\\Downloads\\Mini Project 205117027_Face recog Android\\face-recognizer-android-master\\app\\src\\main\\jni\\tensorflow_demo\\object_tracking\\time_log.cc",
-          "flagsOrdinal": 1,
-          "workingDirectoryOrdinal": 0
-        },
-        {
-          "src": "C:\\Users\\Asus-2019\\Downloads\\Mini Project 205117027_Face recog Android\\face-recognizer-android-master\\app\\src\\main\\jni\\tensorflow_demo\\object_tracking\\tracked_object.cc",
-          "flagsOrdinal": 1,
-          "workingDirectoryOrdinal": 0
-        },
-        {
-          "src": "C:\\Users\\Asus-2019\\Downloads\\Mini Project 205117027_Face recog Android\\face-recognizer-android-master\\app\\src\\main\\jni\\tensorflow_demo\\object_tracking\\utils_neon.cc",
-          "flagsOrdinal": 1,
-          "workingDirectoryOrdinal": 0
-        },
-        {
-          "src": "C:\\Users\\Asus-2019\\Downloads\\Mini Project 205117027_Face recog Android\\face-recognizer-android-master\\app\\src\\main\\jni\\tensorflow_demo\\rgb2yuv.cc",
-          "flagsOrdinal": 1,
-          "workingDirectoryOrdinal": 0
-        },
-        {
-          "src": "C:\\Users\\Asus-2019\\Downloads\\Mini Project 205117027_Face recog Android\\face-recognizer-android-master\\app\\src\\main\\jni\\tensorflow_demo\\yuv2rgb.cc",
-          "flagsOrdinal": 1,
-          "workingDirectoryOrdinal": 0
-        }
-      ],
-      "headers": [
-        {
-          "header": "C:\\Users\\Asus-2019\\Downloads\\Mini Project 205117027_Face recog Android\\face-recognizer-android-master\\app\\src\\main\\jni\\tensorflow_demo\\object_tracking\\config.h",
-          "workingDirectoryOrdinal": 0
-        },
-        {
-          "header": "C:\\Users\\Asus-2019\\Downloads\\Mini Project 205117027_Face recog Android\\face-recognizer-android-master\\app\\src\\main\\jni\\tensorflow_demo\\object_tracking\\flow_cache.h",
-          "workingDirectoryOrdinal": 0
-        },
-        {
-          "header": "C:\\Users\\Asus-2019\\Downloads\\Mini Project 205117027_Face recog Android\\face-recognizer-android-master\\app\\src\\main\\jni\\tensorflow_demo\\object_tracking\\frame_pair.h",
-          "workingDirectoryOrdinal": 0
-        },
-        {
-          "header": "C:\\Users\\Asus-2019\\Downloads\\Mini Project 205117027_Face recog Android\\face-recognizer-android-master\\app\\src\\main\\jni\\tensorflow_demo\\object_tracking\\geom.h",
-          "workingDirectoryOrdinal": 0
-        },
-        {
-          "header": "C:\\Users\\Asus-2019\\Downloads\\Mini Project 205117027_Face recog Android\\face-recognizer-android-master\\app\\src\\main\\jni\\tensorflow_demo\\object_tracking\\gl_utils.h",
-          "workingDirectoryOrdinal": 0
-        },
-        {
-          "header": "C:\\Users\\Asus-2019\\Downloads\\Mini Project 205117027_Face recog Android\\face-recognizer-android-master\\app\\src\\main\\jni\\tensorflow_demo\\object_tracking\\image-inl.h",
-          "workingDirectoryOrdinal": 0
-        },
-        {
-          "header": "C:\\Users\\Asus-2019\\Downloads\\Mini Project 205117027_Face recog Android\\face-recognizer-android-master\\app\\src\\main\\jni\\tensorflow_demo\\object_tracking\\image.h",
-          "workingDirectoryOrdinal": 0
-        },
-        {
-          "header": "C:\\Users\\Asus-2019\\Downloads\\Mini Project 205117027_Face recog Android\\face-recognizer-android-master\\app\\src\\main\\jni\\tensorflow_demo\\object_tracking\\image_data.h",
-          "workingDirectoryOrdinal": 0
-        },
-        {
-          "header": "C:\\Users\\Asus-2019\\Downloads\\Mini Project 205117027_Face recog Android\\face-recognizer-android-master\\app\\src\\main\\jni\\tensorflow_demo\\object_tracking\\image_utils.h",
-          "workingDirectoryOrdinal": 0
-        },
-        {
-          "header": "C:\\Users\\Asus-2019\\Downloads\\Mini Project 205117027_Face recog Android\\face-recognizer-android-master\\app\\src\\main\\jni\\tensorflow_demo\\object_tracking\\integral_image.h",
-          "workingDirectoryOrdinal": 0
-        },
-        {
-          "header": "C:\\Users\\Asus-2019\\Downloads\\Mini Project 205117027_Face recog Android\\face-recognizer-android-master\\app\\src\\main\\jni\\tensorflow_demo\\object_tracking\\jni_utils.h",
-          "workingDirectoryOrdinal": 0
-        },
-        {
-          "header": "C:\\Users\\Asus-2019\\Downloads\\Mini Project 205117027_Face recog Android\\face-recognizer-android-master\\app\\src\\main\\jni\\tensorflow_demo\\object_tracking\\keypoint.h",
-          "workingDirectoryOrdinal": 0
-        },
-        {
-          "header": "C:\\Users\\Asus-2019\\Downloads\\Mini Project 205117027_Face recog Android\\face-recognizer-android-master\\app\\src\\main\\jni\\tensorflow_demo\\object_tracking\\keypoint_detector.h",
-          "workingDirectoryOrdinal": 0
-        },
-        {
-          "header": "C:\\Users\\Asus-2019\\Downloads\\Mini Project 205117027_Face recog Android\\face-recognizer-android-master\\app\\src\\main\\jni\\tensorflow_demo\\object_tracking\\logging.h",
-          "workingDirectoryOrdinal": 0
-        },
-        {
-          "header": "C:\\Users\\Asus-2019\\Downloads\\Mini Project 205117027_Face recog Android\\face-recognizer-android-master\\app\\src\\main\\jni\\tensorflow_demo\\object_tracking\\object_detector.h",
-          "workingDirectoryOrdinal": 0
-        },
-        {
-          "header": "C:\\Users\\Asus-2019\\Downloads\\Mini Project 205117027_Face recog Android\\face-recognizer-android-master\\app\\src\\main\\jni\\tensorflow_demo\\object_tracking\\object_model.h",
-          "workingDirectoryOrdinal": 0
-        },
-        {
-          "header": "C:\\Users\\Asus-2019\\Downloads\\Mini Project 205117027_Face recog Android\\face-recognizer-android-master\\app\\src\\main\\jni\\tensorflow_demo\\object_tracking\\object_tracker.h",
-          "workingDirectoryOrdinal": 0
-        },
-        {
-          "header": "C:\\Users\\Asus-2019\\Downloads\\Mini Project 205117027_Face recog Android\\face-recognizer-android-master\\app\\src\\main\\jni\\tensorflow_demo\\object_tracking\\optical_flow.h",
-          "workingDirectoryOrdinal": 0
-        },
-        {
-          "header": "C:\\Users\\Asus-2019\\Downloads\\Mini Project 205117027_Face recog Android\\face-recognizer-android-master\\app\\src\\main\\jni\\tensorflow_demo\\object_tracking\\sprite.h",
-          "workingDirectoryOrdinal": 0
-        },
-        {
-          "header": "C:\\Users\\Asus-2019\\Downloads\\Mini Project 205117027_Face recog Android\\face-recognizer-android-master\\app\\src\\main\\jni\\tensorflow_demo\\object_tracking\\time_log.h",
-          "workingDirectoryOrdinal": 0
-        },
-        {
-          "header": "C:\\Users\\Asus-2019\\Downloads\\Mini Project 205117027_Face recog Android\\face-recognizer-android-master\\app\\src\\main\\jni\\tensorflow_demo\\object_tracking\\tracked_object.h",
-          "workingDirectoryOrdinal": 0
-        },
-        {
-          "header": "C:\\Users\\Asus-2019\\Downloads\\Mini Project 205117027_Face recog Android\\face-recognizer-android-master\\app\\src\\main\\jni\\tensorflow_demo\\object_tracking\\utils.h",
-          "workingDirectoryOrdinal": 0
-        },
-        {
-          "header": "C:\\Users\\Asus-2019\\Downloads\\Mini Project 205117027_Face recog Android\\face-recognizer-android-master\\app\\src\\main\\jni\\tensorflow_demo\\rgb2yuv.h",
-          "workingDirectoryOrdinal": 0
-        },
-        {
-          "header": "C:\\Users\\Asus-2019\\Downloads\\Mini Project 205117027_Face recog Android\\face-recognizer-android-master\\app\\src\\main\\jni\\tensorflow_demo\\yuv2rgb.h",
-          "workingDirectoryOrdinal": 0
-        }
-      ],
-      "output": "C:\\Users\\Asus-2019\\Downloads\\Mini Project 205117027_Face recog Android\\face-recognizer-android-master\\app\\build\\intermediates\\cmake\\release\\obj\\armeabi-v7a\\libtensorflow_demo.so",
+      "output": "C:\\Users\\Asus-2019\\AndroidStudioProjects\\AndroidFaceRecognition\\app\\build\\intermediates\\cmake\\release\\obj\\armeabi-v7a\\libtensorflow_demo.so",
       "runtimeFiles": []
     }
   },
-  "toolchains": {
-    "2652442117": {
-      "cppCompilerExecutable": "C:\\Users\\Asus-2019\\AppData\\Local\\Android\\Sdk\\ndk\\21.1.6352462\\toolchains\\llvm\\prebuilt\\windows-x86_64\\bin\\clang++.exe"
-    }
-  },
+  "toolchains": {},
   "cFileExtensions": [],
   "cppFileExtensions": [
     "cc",

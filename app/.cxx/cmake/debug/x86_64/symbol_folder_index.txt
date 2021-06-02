@@ -1,1 +1,1 @@
-C:\Users\Asus-2019\Downloads\Mini Project 205117027_Face recog Android\face-recognizer-android-master\app\build\intermediates\cmake\debug\obj\x86_64
+C:\Users\Asus-2019\AndroidStudioProjects\AndroidFaceRecognition\app\build\intermediates\cmake\debug\obj\x86_64

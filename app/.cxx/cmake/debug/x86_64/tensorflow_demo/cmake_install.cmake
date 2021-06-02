@@ -1,4 +1,4 @@
-# Install script for directory: C:/Users/Asus-2019/Downloads/Mini Project 205117027_Face recog Android/face-recognizer-android-master/app/src/main/jni/tensorflow_demo
+# Install script for directory: C:/Users/Asus-2019/AndroidStudioProjects/AndroidFaceRecognition/app/src/main/jni/tensorflow_demo
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)

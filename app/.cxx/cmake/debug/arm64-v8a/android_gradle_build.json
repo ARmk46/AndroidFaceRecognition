@@ -1,49 +1,49 @@
 {
   "stringTable": {},
   "buildFiles": [
-    "/home/sharad2000/AndroidStudioProjects/AndroidFaceRecognition/app/src/main/jni/CMakeLists.txt",
-    "/home/sharad2000/AndroidStudioProjects/AndroidFaceRecognition/app/src/main/jni/jnilibsvm/CMakeLists.txt",
-    "/home/sharad2000/AndroidStudioProjects/AndroidFaceRecognition/app/src/main/jni/tensorflow_demo/CMakeLists.txt"
+    "C:\\Users\\Asus-2019\\AndroidStudioProjects\\AndroidFaceRecognition\\app\\src\\main\\jni\\CMakeLists.txt",
+    "C:\\Users\\Asus-2019\\AndroidStudioProjects\\AndroidFaceRecognition\\app\\src\\main\\jni\\jnilibsvm\\CMakeLists.txt",
+    "C:\\Users\\Asus-2019\\AndroidStudioProjects\\AndroidFaceRecognition\\app\\src\\main\\jni\\tensorflow_demo\\CMakeLists.txt"
   ],
   "cleanCommandsComponents": [
     [
-      "/home/sharad2000/Android/Sdk/cmake/3.10.2.4988404/bin/ninja",
+      "C:\\Users\\Asus-2019\\AppData\\Local\\Android\\Sdk\\cmake\\3.10.2.4988404\\bin\\ninja.exe",
       "-C",
-      "/home/sharad2000/AndroidStudioProjects/AndroidFaceRecognition/app/.cxx/cmake/debug/arm64-v8a",
+      "C:\\Users\\Asus-2019\\AndroidStudioProjects\\AndroidFaceRecognition\\app\\.cxx\\cmake\\debug\\arm64-v8a",
       "clean"
     ]
   ],
   "buildTargetsCommandComponents": [
-    "/home/sharad2000/Android/Sdk/cmake/3.10.2.4988404/bin/ninja",
+    "C:\\Users\\Asus-2019\\AppData\\Local\\Android\\Sdk\\cmake\\3.10.2.4988404\\bin\\ninja.exe",
     "-C",
-    "/home/sharad2000/AndroidStudioProjects/AndroidFaceRecognition/app/.cxx/cmake/debug/arm64-v8a",
+    "C:\\Users\\Asus-2019\\AndroidStudioProjects\\AndroidFaceRecognition\\app\\.cxx\\cmake\\debug\\arm64-v8a",
     "{LIST_OF_TARGETS_TO_BUILD}"
   ],
   "libraries": {
     "tensorflow_demo-Debug-arm64-v8a": {
       "buildCommandComponents": [
-        "/home/sharad2000/Android/Sdk/cmake/3.10.2.4988404/bin/ninja",
+        "C:\\Users\\Asus-2019\\AppData\\Local\\Android\\Sdk\\cmake\\3.10.2.4988404\\bin\\ninja.exe",
         "-C",
-        "/home/sharad2000/AndroidStudioProjects/AndroidFaceRecognition/app/.cxx/cmake/debug/arm64-v8a",
+        "C:\\Users\\Asus-2019\\AndroidStudioProjects\\AndroidFaceRecognition\\app\\.cxx\\cmake\\debug\\arm64-v8a",
         "tensorflow_demo"
       ],
       "buildType": "debug",
       "abi": "arm64-v8a",
       "artifactName": "tensorflow_demo",
-      "output": "/home/sharad2000/AndroidStudioProjects/AndroidFaceRecognition/app/build/intermediates/cmake/debug/obj/arm64-v8a/libtensorflow_demo.so",
+      "output": "C:\\Users\\Asus-2019\\AndroidStudioProjects\\AndroidFaceRecognition\\app\\build\\intermediates\\cmake\\debug\\obj\\arm64-v8a\\libtensorflow_demo.so",
       "runtimeFiles": []
     },
     "jnilibsvm-Debug-arm64-v8a": {
       "buildCommandComponents": [
-        "/home/sharad2000/Android/Sdk/cmake/3.10.2.4988404/bin/ninja",
+        "C:\\Users\\Asus-2019\\AppData\\Local\\Android\\Sdk\\cmake\\3.10.2.4988404\\bin\\ninja.exe",
         "-C",
-        "/home/sharad2000/AndroidStudioProjects/AndroidFaceRecognition/app/.cxx/cmake/debug/arm64-v8a",
+        "C:\\Users\\Asus-2019\\AndroidStudioProjects\\AndroidFaceRecognition\\app\\.cxx\\cmake\\debug\\arm64-v8a",
         "jnilibsvm"
       ],
       "buildType": "debug",
       "abi": "arm64-v8a",
       "artifactName": "jnilibsvm",
-      "output": "/home/sharad2000/AndroidStudioProjects/AndroidFaceRecognition/app/build/intermediates/cmake/debug/obj/arm64-v8a/libjnilibsvm.so",
+      "output": "C:\\Users\\Asus-2019\\AndroidStudioProjects\\AndroidFaceRecognition\\app\\build\\intermediates\\cmake\\debug\\obj\\arm64-v8a\\libjnilibsvm.so",
       "runtimeFiles": []
     }
   },

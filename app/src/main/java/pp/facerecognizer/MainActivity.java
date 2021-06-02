@@ -302,6 +302,7 @@ public class MainActivity extends CameraActivity implements OnImageAvailableList
 
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
         if (!initialized) {
             Snackbar.make(
                     getWindow().getDecorView().findViewById(R.id.container),

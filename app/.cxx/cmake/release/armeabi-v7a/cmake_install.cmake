@@ -1,4 +1,4 @@
-# Install script for directory: C:/Users/Asus-2019/Downloads/Mini Project 205117027_Face recog Android/face-recognizer-android-master/app/src/main/jni
+# Install script for directory: C:/Users/Asus-2019/AndroidStudioProjects/AndroidFaceRecognition/app/src/main/jni
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -39,8 +39,8 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
-  include("C:/Users/Asus-2019/Downloads/Mini Project 205117027_Face recog Android/face-recognizer-android-master/app/.cxx/cmake/release/armeabi-v7a/tensorflow_demo/cmake_install.cmake")
-  include("C:/Users/Asus-2019/Downloads/Mini Project 205117027_Face recog Android/face-recognizer-android-master/app/.cxx/cmake/release/armeabi-v7a/jnilibsvm/cmake_install.cmake")
+  include("C:/Users/Asus-2019/AndroidStudioProjects/AndroidFaceRecognition/app/.cxx/cmake/release/armeabi-v7a/tensorflow_demo/cmake_install.cmake")
+  include("C:/Users/Asus-2019/AndroidStudioProjects/AndroidFaceRecognition/app/.cxx/cmake/release/armeabi-v7a/jnilibsvm/cmake_install.cmake")
 
 endif()
 
@@ -52,5 +52,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "C:/Users/Asus-2019/Downloads/Mini Project 205117027_Face recog Android/face-recognizer-android-master/app/.cxx/cmake/release/armeabi-v7a/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "C:/Users/Asus-2019/AndroidStudioProjects/AndroidFaceRecognition/app/.cxx/cmake/release/armeabi-v7a/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")
