@@ -126,7 +126,7 @@ public class pictureActivity extends AppCompatActivity  {
                 photoFile = createImageFile();
 
             } catch (IOException ex) {
-                System.out.println("Failed To prepare and image");
+
             }
             // Continue only if the File was successfully created
             if (photoFile != null) {

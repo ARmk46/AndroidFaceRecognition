@@ -1,6 +1,15 @@
 package pp.facerecognizer;
 import androidx.appcompat.app.AppCompatActivity;
+
+import android.content.Context;
 import android.os.Bundle;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.BaseAdapter;
+import android.widget.GridView;
+import android.widget.ImageView;
+import android.widget.TextView;
 import android.widget.Toast;
 import java.util.ArrayList;
 import java.util.List;
@@ -11,12 +20,17 @@ import retrofit2.Retrofit;
 
 public class displayImageActivity extends AppCompatActivity {
 
-    private final List<ImagesResponse> imagesResponseList = new ArrayList<>();
+    private List<ImagesResponse> imagesResponseList = new ArrayList<>();
+
+    GridView gridView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_display_image);
+
+
+        gridView = findViewById(R.id.FetchimageGridview);
 
         String uid = getIntent().getStringExtra("id");
         getallImages(uid);
@@ -52,6 +66,16 @@ public class displayImageActivity extends AppCompatActivity {
             @Override
             public void onResponse(Call<List<ImagesResponse>> call, Response<List<ImagesResponse>> response) {
                 Toast.makeText(displayImageActivity.this,"Glad!! Successfull",Toast.LENGTH_SHORT).show();
+
+                if(response.isSuccessful())
+                {
+                    System.out.println(imagesResponseList);
+                    imagesResponseList = response.body();
+                    CustomAdapter customAdapter = new CustomAdapter(imagesResponseList,displayImageActivity.this);
+                    gridView.setAdapter(customAdapter);
+                }
+
+
             }
             @Override
             public void onFailure(Call<List<ImagesResponse>> call, Throwable t) {
@@ -59,7 +83,57 @@ public class displayImageActivity extends AppCompatActivity {
                 Toast.makeText(displayImageActivity.this,"An Error Occured",Toast.LENGTH_SHORT).show();
 
             }
+
         });
+    }
+
+    public class CustomAdapter extends BaseAdapter{
+
+        private List<ImagesResponse> imagesResponseList;
+        private Context context;
+        private LayoutInflater layoutInflater;
+
+        public CustomAdapter(List<ImagesResponse> imagesResponseList, Context context) {
+            this.imagesResponseList = imagesResponseList;
+            this.context = context;
+            this.layoutInflater =(LayoutInflater)context.getSystemService(LAYOUT_INFLATER_SERVICE);
+
+        }
+
+        @Override
+        public int getCount() {
+            return imagesResponseList.size();
+        }
+
+        @Override
+        public Object getItem(int i) {
+            return null;
+        }
+
+        @Override
+        public long getItemId(int i) {
+            return 0;
+        }
+
+        @Override
+        public View getView(int i, View view, ViewGroup viewGroup) {
+            if(view == null)
+            {
+                view = layoutInflater.inflate(R.layout.row_grid_items,viewGroup,false);
+            }
+            ImageView imageView = findViewById(R.id.FetchImageView);
+           // TextView textView = findViewById(R.id.idtextview);
+
+           // textView.setText(imagesResponseList.get(i).getMy_name());
+
+            GlideApp.with(context)
+                    .load(imagesResponseList
+                            .get(i)
+                    .getMy_image())
+                    .into(imageView);
+
+            return view;
+        }
     }
 
 }

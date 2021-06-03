@@ -23,7 +23,7 @@ public interface ApiInterface {
                                    @Part MultipartBody.Part my_image);
 
     @GET("myimage/{id}/")
-    Call<ImagesResponse> getimages(@Path("id") String my_id);
+    Call<ImagesResponse> getimages(@Path("id") String id);
 
     @GET("myimage/all/{my_id}")
     Call<List<ImagesResponse>> getallimages(@Path("my_id") String my_id);

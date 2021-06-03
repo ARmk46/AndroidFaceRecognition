@@ -27,8 +27,10 @@ public class ImagesResponse {
         this.my_name = my_name;
     }
 
-    public String getMy_image() {
-        return my_image;
+    public String getMy_image()
+    {
+        String baseUrl = "http://192.168.43.187:8000/myimage/";
+        return baseUrl+my_image;
     }
     public void setMy_image(String my_image) {
         this.my_image = my_image;
