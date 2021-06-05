@@ -218,9 +218,14 @@ public class Classifier {
     }
 
     int addPerson(String name) {
+      //  String search = "A";
+       // for(String str: classNames  ) {
+         //   if(str.trim().contains(search))
+
+       // }
+
         FileUtils.appendText(name, FileUtils.LABEL_FILE);
         classNames.add(name);
-
         return classNames.size();
     }
 

@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
 import android.widget.BaseAdapter;
 import android.widget.GridView;
 import android.widget.ImageView;
@@ -19,28 +20,21 @@ import retrofit2.Response;
 import retrofit2.Retrofit;
 
 public class displayImageActivity extends AppCompatActivity {
-
     private List<ImagesResponse> imagesResponseList = new ArrayList<>();
-
     GridView gridView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_display_image);
-
-
         gridView = findViewById(R.id.FetchimageGridview);
-
         String uid = getIntent().getStringExtra("id");
         getallImages(uid);
-
     }
 
     public void getImages(String id){
         Retrofit retrofit = ApiClient.getApiClient();
         ApiInterface apiInterface = retrofit.create(ApiInterface.class);
-
         Call<ImagesResponse> imagesResponse = apiInterface.getimages(id);
 
         imagesResponse.enqueue(new Callback<ImagesResponse>() {
@@ -59,23 +53,19 @@ public class displayImageActivity extends AppCompatActivity {
     public void getallImages(String my_id){
         Retrofit retrofit = ApiClient.getApiClient();
         ApiInterface apiInterface = retrofit.create(ApiInterface.class);
-
         Call<List<ImagesResponse>> imagesResponse = apiInterface.getallimages(my_id);
-        System.out.println(imagesResponse);
+
         imagesResponse.enqueue(new Callback<List<ImagesResponse>>() {
             @Override
             public void onResponse(Call<List<ImagesResponse>> call, Response<List<ImagesResponse>> response) {
                 Toast.makeText(displayImageActivity.this,"Glad!! Successfull",Toast.LENGTH_SHORT).show();
-
                 if(response.isSuccessful())
                 {
-                    System.out.println(imagesResponseList);
+
                     imagesResponseList = response.body();
                     CustomAdapter customAdapter = new CustomAdapter(imagesResponseList,displayImageActivity.this);
                     gridView.setAdapter(customAdapter);
                 }
-
-
             }
             @Override
             public void onFailure(Call<List<ImagesResponse>> call, Throwable t) {
@@ -99,39 +89,35 @@ public class displayImageActivity extends AppCompatActivity {
             this.layoutInflater =(LayoutInflater)context.getSystemService(LAYOUT_INFLATER_SERVICE);
 
         }
-
         @Override
         public int getCount() {
             return imagesResponseList.size();
         }
-
         @Override
         public Object getItem(int i) {
             return null;
         }
-
         @Override
         public long getItemId(int i) {
             return 0;
         }
-
         @Override
         public View getView(int i, View view, ViewGroup viewGroup) {
             if(view == null)
             {
                 view = layoutInflater.inflate(R.layout.row_grid_items,viewGroup,false);
             }
-            ImageView imageView = findViewById(R.id.FetchImageView);
-           // TextView textView = findViewById(R.id.idtextview);
 
-           // textView.setText(imagesResponseList.get(i).getMy_name());
-
-            GlideApp.with(context)
-                    .load(imagesResponseList
-                            .get(i)
-                    .getMy_image())
-                    .into(imageView);
-
+                ImageView imageView = view.findViewById(R.id.FetchImageView);
+                TextView textView = view.findViewById(R.id.idtextview);
+                textView.setText(imagesResponseList.get(i).getMy_id());
+                GlideApp.with(context)
+                        .load(imagesResponseList
+                                .get(i)
+                                .getMy_image())
+                        .placeholder(R.drawable.placeholder_image)
+                        .error(R.drawable.error_image)
+                        .into(imageView);
             return view;
         }
     }

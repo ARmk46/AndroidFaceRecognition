@@ -45,6 +45,8 @@ public class CrudActivity extends AppCompatActivity {
         nameedittext = (EditText) findViewById(R.id.nametextview);
         idedittext = (EditText) findViewById(R.id.idtextview);
 
+
+
         adduserbtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

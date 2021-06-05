@@ -1,5 +1,4 @@
 package pp.facerecognizer;
-
 public class ImagesResponse {
     private String id;
     private String my_id;
@@ -29,7 +28,7 @@ public class ImagesResponse {
 
     public String getMy_image()
     {
-        String baseUrl = "http://192.168.43.187:8000/myimage/";
+        String baseUrl = "http://192.168.43.195:8000";
         return baseUrl+my_image;
     }
     public void setMy_image(String my_image) {
