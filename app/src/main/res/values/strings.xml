@@ -2,9 +2,20 @@
     <string name="app_name">face recognizer</string>
     <string name="camera_error">This device doesn\'t support Camera2 API.</string>
     <string name="enter_name">Enter name</string>
+    <string name="enter_user_details">Enter User Details </string>
+    <string name="enter_id">Enter ID</string>
     <string name="select_name">Select name</string>
     <string name="ok">OK</string>
 
     <string name="add_person">add person</string>
     <string name="update_person">update person</string>
+    <string name="title_activity_main2">MainActivity</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">First Fragment</string>
+    <string name="second_fragment_label">Second Fragment</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+
+    <string name="hello_first_fragment">Hello first fragment</string>
+    <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
 </resources>

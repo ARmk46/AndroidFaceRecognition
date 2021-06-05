@@ -1,2 +1,0 @@
-ninja: Entering directory `C:\Users\Asus-2019\AndroidStudioProjects\AndroidFaceRecognition\app\.cxx\cmake\debug\x86'
-ninja: no work to do.

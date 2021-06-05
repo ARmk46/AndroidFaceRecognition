@@ -1,11 +1,13 @@
 package pp.facerecognizer;
 
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.Toast;
 
 import java.util.ArrayList;
@@ -34,6 +36,9 @@ public class HomePage extends AppCompatActivity {
         crudbtn = findViewById(R.id.crudbtn);
         morebtn = findViewById(R.id.morebtn);
 
+
+
+
         facedetectbtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -53,12 +58,26 @@ public class HomePage extends AppCompatActivity {
             }
         });
 
+
+        View dialogView = getLayoutInflater().inflate(R.layout.dialog_edittext, null);
+        EditText uidedittext = dialogView.findViewById(R.id.edit_text);
+        AlertDialog editDialog = new AlertDialog.Builder(HomePage.this)
+                .setTitle(R.string.enter_id)
+                .setView(dialogView)
+                .setPositiveButton(getString(R.string.ok), (dialogInterface, i) -> {
+                    String uid = uidedittext.getText().toString();
+                    Intent Training_gridimageview = new Intent(HomePage.this, displayImageActivity.class);
+                    Training_gridimageview.putExtra("id",uid);
+                    Training_gridimageview.putExtra("parent","training");
+                    startActivity(Training_gridimageview);
+                })
+                .create();
+
+
         trainbtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent crud = new Intent(HomePage.this,imageActivity.class);
-                startActivity(crud);
-              //  getImages("96");
+                editDialog.show();
             }
         });
 

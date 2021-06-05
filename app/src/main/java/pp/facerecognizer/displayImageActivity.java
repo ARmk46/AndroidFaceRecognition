@@ -3,7 +3,10 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Context;
 import android.os.Bundle;
+import android.view.ActionMode;
 import android.view.LayoutInflater;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
@@ -25,11 +28,18 @@ public class displayImageActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_display_image);
         gridView = findViewById(R.id.FetchimageGridview);
+        gridView.setChoiceMode(GridView.CHOICE_MODE_MULTIPLE_MODAL);
+        gridView.setMultiChoiceModeListener(new MultiChoiceModeListener());
+
+        Bundle data = getIntent().getExtras();
+        String parent = data.getString("parent");
         String uid = getIntent().getStringExtra("id");
         getallImages(uid);
+
     }
 
     public void getImages(String id){
@@ -58,10 +68,9 @@ public class displayImageActivity extends AppCompatActivity {
         imagesResponse.enqueue(new Callback<List<ImagesResponse>>() {
             @Override
             public void onResponse(Call<List<ImagesResponse>> call, Response<List<ImagesResponse>> response) {
-                Toast.makeText(displayImageActivity.this,"Glad!! Successfull",Toast.LENGTH_SHORT).show();
+                Toast.makeText(displayImageActivity.this,"Successful !!!",Toast.LENGTH_SHORT).show();
                 if(response.isSuccessful())
                 {
-
                     imagesResponseList = response.body();
                     CustomAdapter customAdapter = new CustomAdapter(imagesResponseList,displayImageActivity.this);
                     gridView.setAdapter(customAdapter);
@@ -112,13 +121,41 @@ public class displayImageActivity extends AppCompatActivity {
                 TextView textView = view.findViewById(R.id.idtextview);
                 textView.setText(imagesResponseList.get(i).getMy_id());
                 GlideApp.with(context)
-                        .load(imagesResponseList
-                                .get(i)
-                                .getMy_image())
-                        .placeholder(R.drawable.placeholder_image)
-                        .error(R.drawable.error_image)
+                        .load(imagesResponseList.get(i).getMy_image())
                         .into(imageView);
             return view;
+        }
+    }
+
+    public class MultiChoiceModeListener implements GridView.MultiChoiceModeListener {
+        public boolean onCreateActionMode(ActionMode mode, Menu menu) {
+            mode.setTitle("Select Items");
+            mode.setSubtitle("One item selected");
+            return true;
+        }
+
+        public boolean onPrepareActionMode(ActionMode mode, Menu menu) {
+            return true;
+        }
+
+        public boolean onActionItemClicked(ActionMode mode, MenuItem item) {
+            return true;
+        }
+
+        public void onDestroyActionMode(ActionMode mode) {
+        }
+
+        public void onItemCheckedStateChanged(ActionMode mode, int position, long id, boolean checked) {
+            int selectCount = gridView.getCheckedItemCount();
+            System.out.println(position);
+            switch (selectCount) {
+                case 1:
+                    mode.setSubtitle("One item selected");
+                    break;
+                default:
+                    mode.setSubtitle("" + selectCount + " items selected");
+                    break;
+            }
         }
     }
 
