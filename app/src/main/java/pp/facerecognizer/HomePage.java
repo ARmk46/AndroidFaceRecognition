@@ -68,7 +68,7 @@ public class HomePage extends AppCompatActivity {
                     String uid = uidedittext.getText().toString();
                     Intent Training_gridimageview = new Intent(HomePage.this, displayImageActivity.class);
                     Training_gridimageview.putExtra("id",uid);
-                    Training_gridimageview.putExtra("parent","training");
+                    Training_gridimageview.putExtra("parent","trainuser");
                     startActivity(Training_gridimageview);
                 })
                 .create();

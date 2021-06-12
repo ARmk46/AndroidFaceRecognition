@@ -1,5 +1,8 @@
 package pp.facerecognizer;
-public class ImagesResponse {
+
+import java.io.Serializable;
+
+public class ImagesResponse implements Serializable {
     private String id;
     private String my_id;
     private String my_name;

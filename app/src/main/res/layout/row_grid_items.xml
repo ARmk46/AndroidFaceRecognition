@@ -16,6 +16,7 @@
             android:layout_width="match_parent"
             android:layout_height="150dp"
             android:scaleType="fitXY"
+            android:outlineAmbientShadowColor="@color/cardview_light_background"
             />
         <TextView
             android:id="@+id/idtextview"
@@ -30,23 +31,11 @@
             android:id="@+id/nametextview"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/FetchImageView"
+            android:layout_below="@+id/idtextview"
             android:layout_marginTop="5dp"
             android:layout_marginBottom="5dp"
             android:layout_centerHorizontal="true"
-
             />
-        <TextView
-            android:id="@+id/uidtextview"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/FetchImageView"
-            android:layout_marginTop="5dp"
-            android:layout_marginBottom="5dp"
-            android:layout_centerHorizontal="true"
-            android:visibility="invisible"
-            />
-
 
     </RelativeLayout>
 

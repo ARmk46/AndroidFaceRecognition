@@ -120,9 +120,6 @@ public class CrudActivity extends AppCompatActivity {
                     }
                     booladd = false;
                 }
-                else if(boolupdate){
-
-                }
 
             }
         });
