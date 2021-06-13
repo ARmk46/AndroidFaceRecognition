@@ -6,12 +6,12 @@
     "deprecated": false,
     "default": true
   },
-  "originalCxxBuildFolder": "/home/sharad2000/AndroidStudioProjects/AndroidFaceRecognition/app/.cxx/cmake/debug/x86",
-  "cxxBuildFolder": "/home/sharad2000/AndroidStudioProjects/AndroidFaceRecognition/app/.cxx/cmake/debug/x86",
+  "originalCxxBuildFolder": "C:\\Users\\Asus-2019\\AndroidStudioProjects\\AndroidFaceRecognition\\app\\.cxx\\cmake\\debug\\x86",
+  "cxxBuildFolder": "C:\\Users\\Asus-2019\\AndroidStudioProjects\\AndroidFaceRecognition\\app\\.cxx\\cmake\\debug\\x86",
   "abiPlatformVersion": 24,
   "cmake": {
-    "cmakeWrappingBaseFolder": "/home/sharad2000/AndroidStudioProjects/AndroidFaceRecognition/app/.cxx/cxx/debug/x86",
-    "cmakeArtifactsBaseFolder": "/home/sharad2000/AndroidStudioProjects/AndroidFaceRecognition/app/.cxx/cmake/debug/x86",
+    "cmakeWrappingBaseFolder": "C:\\Users\\Asus-2019\\AndroidStudioProjects\\AndroidFaceRecognition\\app\\.cxx\\cxx\\debug\\x86",
+    "cmakeArtifactsBaseFolder": "C:\\Users\\Asus-2019\\AndroidStudioProjects\\AndroidFaceRecognition\\app\\.cxx\\cmake\\debug\\x86",
     "effectiveConfiguration": {
       "name": "traditional-android-studio-cmake-environment",
       "description": "Composite reified CMakeSettings configuration",
@@ -19,13 +19,13 @@
       "inheritEnvironments": [
         "ndk"
       ],
-      "buildRoot": "/home/sharad2000/AndroidStudioProjects/AndroidFaceRecognition/app/.cxx/cmake/debug/x86",
-      "cmakeToolchain": "/home/sharad2000/Android/Sdk/ndk/21.4.7075529/build/cmake/android.toolchain.cmake",
-      "cmakeExecutable": "/home/sharad2000/Android/Sdk/cmake/3.10.2.4988404/bin/cmake",
+      "buildRoot": "C:\\Users\\Asus-2019\\AndroidStudioProjects\\AndroidFaceRecognition\\app\\.cxx\\cmake\\debug\\x86",
+      "cmakeToolchain": "C:\\Users\\Asus-2019\\AppData\\Local\\Android\\Sdk\\ndk\\21.4.7075529\\build\\cmake\\android.toolchain.cmake",
+      "cmakeExecutable": "C:\\Users\\Asus-2019\\AppData\\Local\\Android\\Sdk\\cmake\\3.10.2.4988404\\bin\\cmake.exe",
       "variables": [
         {
           "name": "CMAKE_FIND_ROOT_PATH",
-          "value": "/home/sharad2000/AndroidStudioProjects/AndroidFaceRecognition/app/.cxx/cmake/debug/prefab/x86/prefab"
+          "value": "C:\\Users\\Asus-2019\\AndroidStudioProjects\\AndroidFaceRecognition\\app\\.cxx\\cmake\\debug\\prefab\\x86\\prefab"
         },
         {
           "name": "CMAKE_BUILD_TYPE",
@@ -33,7 +33,7 @@
         },
         {
           "name": "CMAKE_TOOLCHAIN_FILE",
-          "value": "/home/sharad2000/Android/Sdk/ndk/21.4.7075529/build/cmake/android.toolchain.cmake"
+          "value": "C:\\Users\\Asus-2019\\AppData\\Local\\Android\\Sdk\\ndk\\21.4.7075529\\build\\cmake\\android.toolchain.cmake"
         },
         {
           "name": "ANDROID_ABI",
@@ -41,7 +41,7 @@
         },
         {
           "name": "ANDROID_NDK",
-          "value": "/home/sharad2000/Android/Sdk/ndk/21.4.7075529"
+          "value": "C:\\Users\\Asus-2019\\AppData\\Local\\Android\\Sdk\\ndk\\21.4.7075529"
         },
         {
           "name": "ANDROID_PLATFORM",
@@ -53,7 +53,7 @@
         },
         {
           "name": "CMAKE_ANDROID_NDK",
-          "value": "/home/sharad2000/Android/Sdk/ndk/21.4.7075529"
+          "value": "C:\\Users\\Asus-2019\\AppData\\Local\\Android\\Sdk\\ndk\\21.4.7075529"
         },
         {
           "name": "CMAKE_EXPORT_COMPILE_COMMANDS",
@@ -61,15 +61,15 @@
         },
         {
           "name": "CMAKE_LIBRARY_OUTPUT_DIRECTORY",
-          "value": "/home/sharad2000/AndroidStudioProjects/AndroidFaceRecognition/app/build/intermediates/cmake/debug/obj/x86"
+          "value": "C:\\Users\\Asus-2019\\AndroidStudioProjects\\AndroidFaceRecognition\\app\\build\\intermediates\\cmake\\debug\\obj\\x86"
         },
         {
           "name": "CMAKE_RUNTIME_OUTPUT_DIRECTORY",
-          "value": "/home/sharad2000/AndroidStudioProjects/AndroidFaceRecognition/app/build/intermediates/cmake/debug/obj/x86"
+          "value": "C:\\Users\\Asus-2019\\AndroidStudioProjects\\AndroidFaceRecognition\\app\\build\\intermediates\\cmake\\debug\\obj\\x86"
         },
         {
           "name": "CMAKE_MAKE_PROGRAM",
-          "value": "/home/sharad2000/Android/Sdk/cmake/3.10.2.4988404/bin/ninja"
+          "value": "C:\\Users\\Asus-2019\\AppData\\Local\\Android\\Sdk\\cmake\\3.10.2.4988404\\bin\\ninja.exe"
         },
         {
           "name": "CMAKE_SYSTEM_NAME",
@@ -81,15 +81,15 @@
         }
       ]
     },
-    "cmakeServerLogFile": "/home/sharad2000/AndroidStudioProjects/AndroidFaceRecognition/app/.cxx/cmake/debug/x86/cmake_server_log.txt"
+    "cmakeServerLogFile": "C:\\Users\\Asus-2019\\AndroidStudioProjects\\AndroidFaceRecognition\\app\\.cxx\\cmake\\debug\\x86\\cmake_server_log.txt"
   },
   "variant": {
     "buildSystemArgumentList": [],
     "cFlagsList": [],
     "cppFlagsList": [],
     "variantName": "debug",
-    "objFolder": "/home/sharad2000/AndroidStudioProjects/AndroidFaceRecognition/app/build/intermediates/cmake/debug/obj",
-    "soFolder": "/home/sharad2000/AndroidStudioProjects/AndroidFaceRecognition/app/build/intermediates/cmake/debug/lib",
+    "objFolder": "C:\\Users\\Asus-2019\\AndroidStudioProjects\\AndroidFaceRecognition\\app\\build\\intermediates\\cmake\\debug\\obj",
+    "soFolder": "C:\\Users\\Asus-2019\\AndroidStudioProjects\\AndroidFaceRecognition\\app\\build\\intermediates\\cmake\\debug\\lib",
     "isDebuggableEnabled": true,
     "validAbiList": [
       "ARMEABI_V7A",
@@ -101,15 +101,15 @@
     "implicitBuildTargetSet": [],
     "cmakeSettingsConfiguration": "android-gradle-plugin-predetermined-name",
     "module": {
-      "cxxFolder": "/home/sharad2000/AndroidStudioProjects/AndroidFaceRecognition/app/.cxx",
+      "cxxFolder": "C:\\Users\\Asus-2019\\AndroidStudioProjects\\AndroidFaceRecognition\\app\\.cxx",
       "splitsAbiFilterSet": [],
-      "intermediatesFolder": "/home/sharad2000/AndroidStudioProjects/AndroidFaceRecognition/app/build/intermediates",
+      "intermediatesFolder": "C:\\Users\\Asus-2019\\AndroidStudioProjects\\AndroidFaceRecognition\\app\\build\\intermediates",
       "gradleModulePathName": ":app",
-      "moduleRootFolder": "/home/sharad2000/AndroidStudioProjects/AndroidFaceRecognition/app",
-      "moduleBuildFile": "/home/sharad2000/AndroidStudioProjects/AndroidFaceRecognition/app/build.gradle",
-      "makeFile": "/home/sharad2000/AndroidStudioProjects/AndroidFaceRecognition/app/src/main/jni/CMakeLists.txt",
+      "moduleRootFolder": "C:\\Users\\Asus-2019\\AndroidStudioProjects\\AndroidFaceRecognition\\app",
+      "moduleBuildFile": "C:\\Users\\Asus-2019\\AndroidStudioProjects\\AndroidFaceRecognition\\app\\build.gradle",
+      "makeFile": "C:\\Users\\Asus-2019\\AndroidStudioProjects\\AndroidFaceRecognition\\app\\src\\main\\jni\\CMakeLists.txt",
       "buildSystem": "CMAKE",
-      "ndkFolder": "/home/sharad2000/Android/Sdk/ndk/21.4.7075529",
+      "ndkFolder": "C:\\Users\\Asus-2019\\AppData\\Local\\Android\\Sdk\\ndk\\21.4.7075529",
       "ndkVersion": "21.4.7075529",
       "ndkSupportedAbiList": [
         "ARMEABI_V7A",
@@ -172,31 +172,31 @@
           "default": true
         }
       ],
-      "originalCmakeToolchainFile": "/home/sharad2000/Android/Sdk/ndk/21.4.7075529/build/cmake/android.toolchain.cmake",
-      "cmakeToolchainFile": "/home/sharad2000/Android/Sdk/ndk/21.4.7075529/build/cmake/android.toolchain.cmake",
+      "originalCmakeToolchainFile": "C:\\Users\\Asus-2019\\AppData\\Local\\Android\\Sdk\\ndk\\21.4.7075529\\build\\cmake\\android.toolchain.cmake",
+      "cmakeToolchainFile": "C:\\Users\\Asus-2019\\AppData\\Local\\Android\\Sdk\\ndk\\21.4.7075529\\build\\cmake\\android.toolchain.cmake",
       "cmake": {
         "isValidCmakeAvailable": true,
-        "cmakeExe": "/home/sharad2000/Android/Sdk/cmake/3.10.2.4988404/bin/cmake",
+        "cmakeExe": "C:\\Users\\Asus-2019\\AppData\\Local\\Android\\Sdk\\cmake\\3.10.2.4988404\\bin\\cmake.exe",
         "minimumCmakeVersion": "3.10.2",
-        "ninjaExe": "/home/sharad2000/Android/Sdk/cmake/3.10.2.4988404/bin/ninja",
+        "ninjaExe": "C:\\Users\\Asus-2019\\AppData\\Local\\Android\\Sdk\\cmake\\3.10.2.4988404\\bin\\ninja.exe",
         "isPreferCmakeFileApiEnabled": true
       },
       "stlSharedObjectMap": {
         "LIBCXX_SHARED": {
-          "ARMEABI_V7A": "/home/sharad2000/Android/Sdk/ndk/21.4.7075529/toolchains/llvm/prebuilt/linux-x86_64/sysroot/usr/lib/arm-linux-androideabi/libc++_shared.so",
-          "ARM64_V8A": "/home/sharad2000/Android/Sdk/ndk/21.4.7075529/toolchains/llvm/prebuilt/linux-x86_64/sysroot/usr/lib/aarch64-linux-android/libc++_shared.so",
-          "X86": "/home/sharad2000/Android/Sdk/ndk/21.4.7075529/toolchains/llvm/prebuilt/linux-x86_64/sysroot/usr/lib/i686-linux-android/libc++_shared.so",
-          "X86_64": "/home/sharad2000/Android/Sdk/ndk/21.4.7075529/toolchains/llvm/prebuilt/linux-x86_64/sysroot/usr/lib/x86_64-linux-android/libc++_shared.so"
+          "ARMEABI_V7A": "C:\\Users\\Asus-2019\\AppData\\Local\\Android\\Sdk\\ndk\\21.4.7075529\\toolchains\\llvm\\prebuilt\\windows-x86_64\\sysroot\\usr\\lib\\arm-linux-androideabi\\libc++_shared.so",
+          "ARM64_V8A": "C:\\Users\\Asus-2019\\AppData\\Local\\Android\\Sdk\\ndk\\21.4.7075529\\toolchains\\llvm\\prebuilt\\windows-x86_64\\sysroot\\usr\\lib\\aarch64-linux-android\\libc++_shared.so",
+          "X86": "C:\\Users\\Asus-2019\\AppData\\Local\\Android\\Sdk\\ndk\\21.4.7075529\\toolchains\\llvm\\prebuilt\\windows-x86_64\\sysroot\\usr\\lib\\i686-linux-android\\libc++_shared.so",
+          "X86_64": "C:\\Users\\Asus-2019\\AppData\\Local\\Android\\Sdk\\ndk\\21.4.7075529\\toolchains\\llvm\\prebuilt\\windows-x86_64\\sysroot\\usr\\lib\\x86_64-linux-android\\libc++_shared.so"
         },
         "LIBCXX_STATIC": {},
         "NONE": {},
         "SYSTEM": {}
       },
       "project": {
-        "rootBuildGradleFolder": "/home/sharad2000/AndroidStudioProjects/AndroidFaceRecognition",
-        "cxxFolder": "/home/sharad2000/AndroidStudioProjects/AndroidFaceRecognition/.cxx",
-        "compilerSettingsCacheFolder": "/home/sharad2000/AndroidStudioProjects/AndroidFaceRecognition/.cxx",
-        "sdkFolder": "/home/sharad2000/Android/Sdk",
+        "rootBuildGradleFolder": "C:\\Users\\Asus-2019\\AndroidStudioProjects\\AndroidFaceRecognition",
+        "cxxFolder": "C:\\Users\\Asus-2019\\AndroidStudioProjects\\AndroidFaceRecognition\\.cxx",
+        "compilerSettingsCacheFolder": "C:\\Users\\Asus-2019\\AndroidStudioProjects\\AndroidFaceRecognition\\.cxx",
+        "sdkFolder": "C:\\Users\\Asus-2019\\AppData\\Local\\Android\\Sdk",
         "isNativeCompilerSettingsCacheEnabled": false,
         "isBuildOnlyTargetAbiEnabled": true,
         "isCmakeBuildCohabitationEnabled": false,
@@ -205,10 +205,10 @@
       },
       "nativeBuildOutputLevel": "QUIET"
     },
-    "prefabDirectory": "/home/sharad2000/AndroidStudioProjects/AndroidFaceRecognition/app/.cxx/cmake/debug/prefab"
+    "prefabDirectory": "C:\\Users\\Asus-2019\\AndroidStudioProjects\\AndroidFaceRecognition\\app\\.cxx\\cmake\\debug\\prefab"
   },
   "buildSettings": {
     "environmentVariables": []
   },
-  "prefabFolder": "/home/sharad2000/AndroidStudioProjects/AndroidFaceRecognition/app/.cxx/cmake/debug/prefab/x86"
+  "prefabFolder": "C:\\Users\\Asus-2019\\AndroidStudioProjects\\AndroidFaceRecognition\\app\\.cxx\\cmake\\debug\\prefab\\x86"
 }

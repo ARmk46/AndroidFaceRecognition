@@ -1,7 +1,7 @@
-Executable : /home/sharad2000/Android/Sdk/cmake/3.10.2.4988404/bin/ninja
+Executable : C:\Users\Asus-2019\AppData\Local\Android\Sdk\cmake\3.10.2.4988404\bin\ninja.exe
 arguments : 
 -C
-/home/sharad2000/AndroidStudioProjects/AndroidFaceRecognition/app/.cxx/cmake/debug/arm64-v8a
+C:\Users\Asus-2019\AndroidStudioProjects\AndroidFaceRecognition\app\.cxx\cmake\debug\arm64-v8a
 jnilibsvm
 tensorflow_demo
 jvmArgs : 

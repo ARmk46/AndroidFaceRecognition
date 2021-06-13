@@ -227,7 +227,7 @@ public class displayImageActivity extends AppCompatActivity {
                 view = layoutInflater.inflate(R.layout.row_grid_items,viewGroup,false);
             }
 
-                ImageView imageView = view.findViewById(R.id.FetchImageView);
+            ImageView imageView = view.findViewById(R.id.FetchImageView);
                 TextView textView = view.findViewById(R.id.idtextview);
                 TextView nametextView = view.findViewById(R.id.nametextview);
 
@@ -279,6 +279,13 @@ public class displayImageActivity extends AppCompatActivity {
             if(parent.equals("trainuser") || parent.equals("deleteuser")) {
                 int selectCount = gridView.getCheckedItemCount();
                 checkedimages.add(imagesResponseList.get(position).getId());
+                if(checked){
+                    View tv = (View) gridView.getChildAt(position);
+                    tv.setBackgroundColor(Color.BLUE);
+                }else{
+                    View tv = (View) gridView.getChildAt(position);
+                    tv.setBackgroundColor(Color.TRANSPARENT);
+                }
 
                 switch (selectCount) {
                     case 1:
