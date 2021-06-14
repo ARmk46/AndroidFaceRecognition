@@ -21,6 +21,9 @@ import android.widget.GridView;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import com.bumptech.glide.load.engine.DiskCacheStrategy;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -106,9 +109,6 @@ public class displayImageActivity extends AppCompatActivity {
                                     for (int i = 0; i < checkedimages.size(); i++) {
 
                                         String id = checkedimages.get(i);
-                                        System.out.println("-------------------------->"+id+" <---------------------------------------");
-                                        System.out.println(id);
-
                                         Retrofit retrofit = ApiClient.getApiClient();
                                         ApiInterface apiInterface = retrofit.create(ApiInterface.class);
                                         Call<ResponseBody> call = apiInterface.deleteItem(id);
@@ -183,7 +183,7 @@ public class displayImageActivity extends AppCompatActivity {
                         Toast.makeText(displayImageActivity.this,"Nothing to Display!!!",Toast.LENGTH_SHORT).show();
                     }
                     else{
-                        Toast.makeText(displayImageActivity.this,"Successful!!!",Toast.LENGTH_SHORT).show();
+                        Toast.makeText(displayImageActivity.this,"Successfull !!!",Toast.LENGTH_SHORT).show();
                     }
                     CustomAdapter customAdapter = new CustomAdapter(imagesResponseList,displayImageActivity.this);
                     gridView.setAdapter(customAdapter);
@@ -211,6 +211,8 @@ public class displayImageActivity extends AppCompatActivity {
             this.layoutInflater =(LayoutInflater)context.getSystemService(LAYOUT_INFLATER_SERVICE);
 
         }
+
+
         @Override
         public int getCount() {
             return imagesResponseList.size();
@@ -242,6 +244,9 @@ public class displayImageActivity extends AppCompatActivity {
                 }
                 GlideApp.with(context)
                         .load(imagesResponseList.get(i).getMy_image())
+                        .diskCacheStrategy(DiskCacheStrategy.NONE)
+                        .placeholder(R.drawable.ic_launcher_background)
+                        .skipMemoryCache(true)
                         .into(imageView);
 
             return view;

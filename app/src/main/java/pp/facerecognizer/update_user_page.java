@@ -54,6 +54,7 @@ public class update_user_page extends AppCompatActivity {
     static final int REQUEST_IMAGE_CAPTURE = 1;
     String currentPhotoPath;
     Uri photoURI;
+    boolean picture_flag = false;
 
 
 
@@ -78,6 +79,7 @@ public class update_user_page extends AppCompatActivity {
            uimage.setOnClickListener(new View.OnClickListener() {
                @Override
                public void onClick(View v) {
+                    picture_flag = true;
                     dispatchTakePictureIntent();
                }
            });
@@ -97,11 +99,18 @@ public class update_user_page extends AppCompatActivity {
                                    public void onClick(DialogInterface dialog, int which) {
                                        naam = name.getText().toString();
                                        pta = uid.getText().toString();
+                                     //  System.out.println("-------------------------------------> "+picture_flag+" <------------------------------------->");
+                                       if(picture_flag)
+                                       {
+                                           String img_id = imagesResponse.getId();
+                                           System.out.println(img_id);
+                                           DeletePreviousImage(img_id);
+                                           UploadImage(naam,pta,photoURI);
 
-                                       String img_id = imagesResponse.getId();
-                                       System.out.println(img_id);
-                                       DeletePreviousImage(img_id);
-                                       UploadImage(naam,pta,photoURI);
+                                       }
+                                       else{
+                                           Toast.makeText(update_user_page.this,"Image Update Required !!!!!!",Toast.LENGTH_SHORT).show();
+                                       }
 
                                    }
                                })
@@ -236,20 +245,21 @@ public class update_user_page extends AppCompatActivity {
             @Override
             public void onFailure(Call<ResponseBody> call, Throwable t) {
                 Toast.makeText(update_user_page.this,"Failed to Upload,Contact Developer",Toast.LENGTH_SHORT).show();
-                finish();
+               // finish();
             }
         });
     }
 
     private void DeletePreviousImage(String id)
     {
-        System.out.println("-------------------------->"+id+" <---------------------------------------");
+        //System.out.println("-------------------------->"+id+" <---------------------------------------");
         Retrofit retrofit = ApiClient.getApiClient();
         ApiInterface apiInterface = retrofit.create(ApiInterface.class);
         Call<ResponseBody> call = apiInterface.deleteItem(id);
         call.enqueue(new Callback<ResponseBody>() {
             @Override
             public void onResponse(Call<ResponseBody> call, Response<ResponseBody> response) {
+
             }
 
             @Override
