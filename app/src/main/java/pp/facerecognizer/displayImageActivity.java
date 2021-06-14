@@ -106,6 +106,9 @@ public class displayImageActivity extends AppCompatActivity {
                                     for (int i = 0; i < checkedimages.size(); i++) {
 
                                         String id = checkedimages.get(i);
+                                        System.out.println("-------------------------->"+id+" <---------------------------------------");
+                                        System.out.println(id);
+
                                         Retrofit retrofit = ApiClient.getApiClient();
                                         ApiInterface apiInterface = retrofit.create(ApiInterface.class);
                                         Call<ResponseBody> call = apiInterface.deleteItem(id);
