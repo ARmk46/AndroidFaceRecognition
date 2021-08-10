@@ -13,9 +13,7 @@
 * See the License for the specific language governing permissions and
 * limitations under the License.
 */
-
 package pp.facerecognizer;
-
 import android.content.ClipData;
 import android.content.Intent;
 import android.content.res.AssetManager;
@@ -56,6 +54,7 @@ import pp.facerecognizer.tracking.MultiBoxTracker;
 * An activity that uses a TensorFlowMultiBoxDetector and ObjectTracker to detect and then track
 * objects.
 */
+
 public class MainActivity extends CameraActivity implements OnImageAvailableListener {
     private static final Logger LOGGER = new Logger();
 
@@ -329,6 +328,7 @@ public class MainActivity extends CameraActivity implements OnImageAvailableList
             new Thread(() -> {
                 try {
                     classifier.updateData(requestCode, getContentResolver(), uris);
+
                 } catch (Exception e) {
                     LOGGER.e(e, "Exception!");
                 } finally {
@@ -348,7 +348,6 @@ public class MainActivity extends CameraActivity implements OnImageAvailableList
         intent.addCategory(Intent.CATEGORY_OPENABLE);
         intent.putExtra(Intent.EXTRA_ALLOW_MULTIPLE, true);
         intent.setType("image/*");
-
         startActivityForResult(intent, requestCode);
     }
 }

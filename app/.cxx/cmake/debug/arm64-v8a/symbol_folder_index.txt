@@ -1,1 +1,1 @@
-C:\Users\Asus-2019\AndroidStudioProjects\AndroidFaceRecognition\app\build\intermediates\cmake\debug\obj\arm64-v8a
+/home/sharad2000/AndroidStudioProjects/AndroidFaceRecognition/app/build/intermediates/cmake/debug/obj/arm64-v8a

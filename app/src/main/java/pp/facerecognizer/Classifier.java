@@ -22,20 +22,35 @@ import android.graphics.BitmapFactory;
 import android.graphics.Matrix;
 import android.graphics.Rect;
 import android.graphics.RectF;
+import android.graphics.drawable.Drawable;
 import android.net.Uri;
 import android.os.ParcelFileDescriptor;
+import android.os.SystemClock;
+import android.widget.Toast;
 
 import java.io.FileDescriptor;
+import java.net.URL;
 import java.nio.FloatBuffer;
 import java.util.ArrayList;
+import java.util.Calendar;
 import java.util.LinkedList;
 import java.util.List;
 
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.core.util.Pair;
+
+import com.bumptech.glide.Glide;
+import com.bumptech.glide.request.target.CustomTarget;
+import com.bumptech.glide.request.transition.Transition;
+
 import pp.facerecognizer.env.FileUtils;
 import pp.facerecognizer.wrapper.FaceNet;
 import pp.facerecognizer.wrapper.LibSVM;
 import pp.facerecognizer.wrapper.MTCNN;
+
+import static pp.facerecognizer.displayImageActivity.BitmapList;
+import static pp.facerecognizer.displayImageActivity.imagesResponseList;
 
 /**
  * Generic interface for interacting with different recognition engines.
@@ -117,7 +132,6 @@ public class Classifier {
 
     public static final int EMBEDDING_SIZE = 512;
     private static Classifier classifier;
-
     private MTCNN mtcnn;
     private FaceNet faceNet;
     private LibSVM svm;
@@ -154,7 +168,7 @@ public class Classifier {
         return cs;
     }
 
-    List<Recognition> recognizeImage(Bitmap bitmap, Matrix matrix) {
+    List<Recognition> recognizeImage(Bitmap bitmap, Matrix matrix){
         synchronized (this) {
             Pair faces[] = mtcnn.detect(bitmap);
 
@@ -190,30 +204,26 @@ public class Classifier {
     void updateData(int label, ContentResolver contentResolver, ArrayList<Uri> uris) throws Exception {
         synchronized (this) {
             ArrayList<float[]> list = new ArrayList<>();
+                for (Uri uri : uris) {
+                    Bitmap bitmap = getBitmapFromUri(contentResolver, uri);
+                    Pair faces[] = mtcnn.detect(bitmap);  // Detecting and fetching images using MTCNN.
+                    float max = 0f;
+                    Rect rect = new Rect();
 
-            for (Uri uri : uris) {
-                Bitmap bitmap = getBitmapFromUri(contentResolver, uri);
-                Pair faces[] = mtcnn.detect(bitmap);
+                    for (Pair face : faces) {
+                        Float prob = (Float) face.second;
+                        if (prob > max) {
+                            max = prob;
 
-                float max = 0f;
-                Rect rect = new Rect();
-
-                for (Pair face : faces) {
-                    Float prob = (Float) face.second;
-                    if (prob > max) {
-                        max = prob;
-
-                        RectF rectF = (RectF) face.first;
-                        rectF.round(rect);
+                            RectF rectF = (RectF) face.first;
+                            rectF.round(rect);
+                        }
                     }
+                    float[] emb_array = new float[EMBEDDING_SIZE];
+                    faceNet.getEmbeddings(bitmap, rect).get(emb_array);  // bounding box;
+                    list.add(emb_array);
                 }
-
-                float[] emb_array = new float[EMBEDDING_SIZE];
-                faceNet.getEmbeddings(bitmap, rect).get(emb_array);
-                list.add(emb_array);
-            }
-
-            svm.train(label, list);
+                svm.train(label, list);  // Whole images will be there i.e. old images + new arriving images and labels
         }
     }
 
@@ -223,7 +233,6 @@ public class Classifier {
          //   if(str.trim().contains(search))
 
        // }
-
         FileUtils.appendText(name, FileUtils.LABEL_FILE);
         classNames.add(name);
         return classNames.size();

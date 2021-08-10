@@ -261,7 +261,6 @@ public class update_user_page extends AppCompatActivity {
             public void onResponse(Call<ResponseBody> call, Response<ResponseBody> response) {
 
             }
-
             @Override
             public void onFailure(Call<ResponseBody> call, Throwable t) {
                 Toast.makeText(update_user_page.this, "Failed to delete,Contact Developer", Toast.LENGTH_SHORT).show();

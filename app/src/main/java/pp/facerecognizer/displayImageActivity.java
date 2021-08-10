@@ -1,4 +1,6 @@
 package pp.facerecognizer;
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.app.AlertDialog;
@@ -6,8 +8,14 @@ import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.res.ColorStateList;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
+import android.graphics.Canvas;
 import android.graphics.Color;
+import android.graphics.drawable.BitmapDrawable;
+import android.graphics.drawable.Drawable;
 import android.os.Bundle;
+import android.os.Parcelable;
 import android.view.ActionMode;
 import android.view.LayoutInflater;
 import android.view.Menu;
@@ -22,7 +30,17 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.bumptech.glide.Glide;
 import com.bumptech.glide.load.engine.DiskCacheStrategy;
+import com.bumptech.glide.request.Request;
+import com.bumptech.glide.request.RequestOptions;
+import com.bumptech.glide.request.target.BitmapImageViewTarget;
+import com.bumptech.glide.request.target.CustomTarget;
+import com.bumptech.glide.request.target.SizeReadyCallback;
+import com.bumptech.glide.request.target.Target;
+import com.bumptech.glide.request.transition.Transition;
+
+import org.jetbrains.annotations.NotNull;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -34,8 +52,9 @@ import retrofit2.Response;
 import retrofit2.Retrofit;
 
 public class displayImageActivity extends AppCompatActivity {
-    private List<ImagesResponse> imagesResponseList = new ArrayList<>();
+    public static List<ImagesResponse> imagesResponseList = new ArrayList<>();
     private List<String>checkedimages =new ArrayList<String>();
+    public static  List<Bitmap> BitmapList=new ArrayList<Bitmap>();
 
     GridView gridView;
     String parent;
@@ -64,7 +83,6 @@ public class displayImageActivity extends AppCompatActivity {
         parent = data.getString("parent");
         uid = getIntent().getStringExtra("id");
         getallImages(uid);
-
 
 
           gridView.setOnItemClickListener(new AdapterView.OnItemClickListener(){
@@ -140,13 +158,49 @@ public class displayImageActivity extends AppCompatActivity {
                             .show();
 
                 }
-                else if(parent.equals("trainuser")){
-                    System.out.println("train user called");
+                else if(parent.equals("trainuser")) {
+                    BitmapList.clear();
+                    for (int i = 0; i < checkedimages.size(); i++) {
+                        String lurl =imagesResponseList.get(i).getMy_image();
+                        Glide.with(getApplicationContext())
+                                .asBitmap()
+                                .load(lurl)
+                                .into(new CustomTarget<Bitmap>() {
+                                    @Override
+                                    public void onResourceReady(@NonNull Bitmap resource, @Nullable Transition<? super Bitmap> transition) {
+                                     BitmapList.add(resource);
+                                     System.out.println(resource);
+                                    }
+                                    @Override
+                                    public void onLoadCleared(@Nullable Drawable placeholder) {
+                                    }
+                                });
+
+                    }//for
+
                 }
 
             }
         });
 
+    }
+    public static Bitmap drawableToBitmap(Drawable drawable) {
+
+        if (drawable instanceof BitmapDrawable) {
+            return ((BitmapDrawable) drawable).getBitmap();
+        }
+
+        int width = drawable.getIntrinsicWidth();
+        width = width > 0 ? width : 1;
+        int height = drawable.getIntrinsicHeight();
+        height = height > 0 ? height : 1;
+
+        Bitmap bitmap = Bitmap.createBitmap(width, height, Bitmap.Config.ARGB_8888);
+        Canvas canvas = new Canvas(bitmap);
+        drawable.setBounds(0, 0, canvas.getWidth(), canvas.getHeight());
+        drawable.draw(canvas);
+
+        return bitmap;
     }
 
     public void getImages(String id){
@@ -209,7 +263,6 @@ public class displayImageActivity extends AppCompatActivity {
             this.imagesResponseList = imagesResponseList;
             this.context = context;
             this.layoutInflater =(LayoutInflater)context.getSystemService(LAYOUT_INFLATER_SERVICE);
-
         }
 
 
@@ -232,7 +285,7 @@ public class displayImageActivity extends AppCompatActivity {
                 view = layoutInflater.inflate(R.layout.row_grid_items,viewGroup,false);
             }
 
-            ImageView imageView = view.findViewById(R.id.FetchImageView);
+                ImageView imageView = view.findViewById(R.id.FetchImageView);
                 TextView textView = view.findViewById(R.id.idtextview);
                 TextView nametextView = view.findViewById(R.id.nametextview);
 
@@ -244,11 +297,10 @@ public class displayImageActivity extends AppCompatActivity {
                 }
                 GlideApp.with(context)
                         .load(imagesResponseList.get(i).getMy_image())
-                        .diskCacheStrategy(DiskCacheStrategy.NONE)
+                        .diskCacheStrategy(DiskCacheStrategy.DATA)
                         .placeholder(R.drawable.ic_launcher_background)
-                        .skipMemoryCache(true)
+                       // .skipMemoryCache(true)
                         .into(imageView);
-
             return view;
         }
     }
@@ -286,13 +338,15 @@ public class displayImageActivity extends AppCompatActivity {
         public void onItemCheckedStateChanged(ActionMode mode, int position, long id, boolean checked) {
             if(parent.equals("trainuser") || parent.equals("deleteuser")) {
                 int selectCount = gridView.getCheckedItemCount();
-                checkedimages.add(imagesResponseList.get(position).getId());
+               // Toast.makeText(displayImageActivity.this,"Position" + position ,Toast.LENGTH_SHORT).show();
                 if(checked){
-                    View tv = (View) gridView.getChildAt(position);
-                    tv.setBackgroundColor(Color.BLUE);
+                 //   View tv = (View) gridView.getChildAt(position);
+                  //  tv.setBackgroundColor(Color.BLUE);
+                    checkedimages.add(imagesResponseList.get(position).getId());
                 }else{
-                    View tv = (View) gridView.getChildAt(position);
-                    tv.setBackgroundColor(Color.TRANSPARENT);
+                   // View tv = (View) gridView.getChildAt(position);
+                   // tv.setBackgroundColor(Color.TRANSPARENT);
+                    checkedimages.remove(imagesResponseList.get(position).getId());
                 }
 
                 switch (selectCount) {

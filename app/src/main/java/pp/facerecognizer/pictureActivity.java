@@ -200,27 +200,17 @@ public class pictureActivity extends AppCompatActivity  {
         call.enqueue(new Callback<ResponseBody>() {
             @Override
             public void onResponse(Call<ResponseBody> call, Response<ResponseBody> response) {
-                Toast.makeText(pictureActivity.this,"Successfully Uploaded !!!!!!",Toast.LENGTH_SHORT).show();
-                new AlertDialog.Builder(pictureActivity.this)
-                        .setTitle("Alert")
-                        .setMessage("Do you want to Upload Image again ???")
-                        .setPositiveButton(android.R.string.yes, new DialogInterface.OnClickListener() {
-                            public void onClick(DialogInterface dialog, int which) {
-                                upl_button.setEnabled(false);
-                            }
-                        })
-                        .setNegativeButton(android.R.string.no, new DialogInterface.OnClickListener() {
-                            @Override
-                            public void onClick(DialogInterface dialogInterface, int i) {
-                                finish();
-                            }
-                        })
-                        .setIcon(android.R.drawable.ic_dialog_alert)
-                        .show();
+                if(response.code()==404){
+                    Toast.makeText(pictureActivity.this, "Failed to Add User !!! User Already Exist !!!", Toast.LENGTH_SHORT).show();
+                }
+                else {
+                    Toast.makeText(pictureActivity.this, "Successfully Uploaded !!!", Toast.LENGTH_SHORT).show();
+                }
+                finish();
             }
             @Override
             public void onFailure(Call<ResponseBody> call, Throwable t) {
-                Toast.makeText(pictureActivity.this,"Failed to Upload,Contact Developer",Toast.LENGTH_SHORT).show();
+                Toast.makeText(pictureActivity.this,"Failed to Upload !!!, Contact Developer",Toast.LENGTH_SHORT).show();
                 finish();
             }
         });

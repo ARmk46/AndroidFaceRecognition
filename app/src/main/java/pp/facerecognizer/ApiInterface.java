@@ -31,7 +31,7 @@ public interface ApiInterface {
     @GET("myimage/all/{my_id}")
     Call<List<ImagesResponse>> getallimages(@Path("my_id") String my_id);
 
-    @DELETE("/myimage/{id}/")
+    @DELETE("/myimage/all/{id}/")
     Call<ResponseBody> deleteItem(@Path("id") String id);
 
     @Multipart
